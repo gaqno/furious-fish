@@ -1,48 +1,34 @@
 <template>
-  <layout-two>
-    <main class="box-25">
-      <home-two-hero-slider />
-      <category-area :style_2="true" />
-      <trending-product-two />
-      <shop-banner :style_2="true"/>
-      <sale-off-area-two/>
-      <blog-area/>
-      <client-brand-slider :style_2="true"/>
-      <subscribe-area :style_2="true" />
-    </main>
-  </layout-two>
+  <layout-five> 
+    <home-five-hero-slider/>
+    <div class="box-25">
+      <trending-products :style_3="true"/>
+      <shop-banner/>
+      <subscribe-area/>
+    </div>
+  </layout-five>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import LayoutTwo from "~~/layout/LayoutTwo.vue";
-import HomeTwoHeroSlider from "~~/components/hero-banner/HomeTwoHeroSlider.vue";
-import CategoryArea from "~~/components/category/CategoryArea.vue";
-import TrendingProductTwo from "~~/components/products/TrendingProductTwo.vue";
+import LayoutFive from "~~/layout/LayoutFive.vue";
+import HomeFiveHeroSlider from "~~/components/hero-banner/HomeFiveHeroSlider.vue";
+import TrendingProducts from "~~/components/products/TrendingProducts.vue";
 import ShopBanner from "~~/components/shop-banner/ShopBanner.vue";
-import SaleOffAreaTwo from "~~/components/products/SaleOffAreaTwo.vue";
-import BlogArea from "~~/components/blogs/BlogArea.vue";
-import ClientBrandSlider from "~~/components/client-brands/ClientBrandSlider.vue";
 import SubscribeArea from "~~/components/subscribe/SubscribeArea.vue";
 
 export default defineComponent({
   components: {
-    LayoutTwo,
-    HomeTwoHeroSlider,
-    CategoryArea,
-    TrendingProductTwo,
+    LayoutFive,
+    HomeFiveHeroSlider,
+    TrendingProducts,
     ShopBanner,
-    SaleOffAreaTwo,
-    BlogArea,
-    ClientBrandSlider,
-    SubscribeArea,
+    SubscribeArea
   },
   setup() {
     useHead({
-      title: "Home Two",
+      title: "Home 2",
     });
   },
 });
 </script>
-
-<style scoped></style>

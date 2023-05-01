@@ -18,7 +18,7 @@ export default defineNuxtConfig({
   ],
   app: {
     head: {
-      title: "Outstock - Clean, Minimal eCommerce Vue Nuxt 3 Template",
+      title: "PESCA FURIOSA - Loja de Pesca 🎣",
       // link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}],
       script: [
         {
@@ -27,4 +27,17 @@ export default defineNuxtConfig({
       ],
     },
   },
+  runtimeConfig: {
+    public: {
+      CLIENT_ID: process.env.CLIENT_ID,
+      CLIENT_SECRET: process.env.CLIENT_SECRET,
+      REDIRECT_URI: process.env.REDIRECT_URI,
+      PUBLIC_KEY: process.env.PUBLIC_KEY,
+      ACCESS_TOKEN: process.env.ACCESS_TOKEN,
+      SYS_PWD: process.env.SYS_PWD,
+    }
+  }
+  // add envs
+  
+
 })

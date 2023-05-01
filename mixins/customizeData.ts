@@ -6,11 +6,17 @@ export default {
       menuData: [
         {
           link: '/',
-          title: 'Início',
+          title: 'Home',
           hasDropdown: true,
           megamenu: false,
           dropdownItems: [
-            { link: '/', title: 'Início' },
+            { link: '/', title: 'Home Style 1' },
+            { link: '/home-2', title: 'Home Style 2' },
+            { link: '/home-3', title: 'Home Style 3' },
+            { link: '/home-4', title: 'Home Style 4' },
+            { link: '/home-5', title: 'Home Style 5' },
+            { link: '/home-6', title: 'Home Style 6' },
+            { link: '/home-7', title: 'Home Style 7' },
           ]
         },
         {
@@ -24,9 +30,12 @@ export default {
               title: 'Shop Pages',
               dropdownMenu: [
                 { link: '/shop', title: 'Standard Shop Page' },
-                // { link: '/shop-right', title: 'Shop Right Sidebar' },
-                // { link: '/shop-4-col', title: 'Shop 4 Column' },
-                // { link: '/shop-3-col', title: 'Shop 3 Column' },
+                { link: '/shop-right', title: 'Shop Right Sidebar' },
+                { link: '/shop-4-col', title: 'Shop 4 Column' },
+                { link: '/shop-3-col', title: 'Shop 3 Column' },
+                { link: '/shop', title: 'Shop Page' },
+                { link: '/shop', title: 'Shop Page' },
+                { link: '/shop', title: 'Shop Infinity' },
               ]
             },
             {
@@ -34,6 +43,12 @@ export default {
               title: 'Products Pages',
               dropdownMenu: [
                 { link: '/product-details', title: 'Product Details' },
+                { link: '/product-details', title: 'Product Page V2' },
+                { link: '/product-details', title: 'Product Page V3' },
+                { link: '/product-details', title: 'Product Page V4' },
+                { link: '/product-details', title: 'Simple Product' },
+                { link: '/product-details', title: 'Variable Product' },
+                { link: '/product-details', title: 'External Product' },
               ]
             },
             {
