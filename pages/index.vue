@@ -7,7 +7,7 @@
       <ShopBanner :style_2="true" />
       <SaleOffAreaTwo />
       <!-- <BlogArea/> -->
-      <ClientBrandSlider :style_2="true" />
+    <ClientBrandSlider :style_2="true" />
       <SubscribeArea :style_2="true" />
     </main>
   </LayoutTwo>
@@ -34,9 +34,9 @@ useHead({
 
 watchEffect(() => productsList.value.length !== 0 && products.$patch({ products: productsList.value, filterProducts: productsList.value }))
 onMounted(() => {
+  productsList.value = []
   getAllProducts(1361737006)
     .then((res: any) => {
-      productsList.value = []
       res.data.results.map((item: any) => {
         getProductDetails(item.id)
           .then((i: any) => {
