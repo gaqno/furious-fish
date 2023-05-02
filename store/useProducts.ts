@@ -100,6 +100,10 @@ export const useProductsStore = defineStore("products", {
       this.filterProducts = this.products;
       this.activeCls = '';
       this.priceRange = [0,500]
+    },
+    setProducts(products: ProductType[]) {
+      this.products = products;
+      this.filterProducts = products;
     }
   },
   getters:{

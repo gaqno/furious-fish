@@ -32,15 +32,13 @@ useHead({
   title: "PESCA FURIOSA 🎣",
 });
 
-watchEffect(() => productsList.value.length !== 0 && products.$patch({ products: productsList.value, filterProducts: productsList.value }))
-onMounted(() => {
-  productsList.value = []
-  getAllProducts(1361737006)
-    .then((res: any) => {
-      res.data.results.map((item: any) => {
-        getProductDetails(item.id)
-          .then((i: any) => {
-            try {
+const fetchProducts = () => {
+  return new Promise((resolve, reject) => {
+    getAllProducts(1361737006)
+      .then((res: any) => {
+        res.data.results.map((item: any) => {
+          getProductDetails(item.id)
+            .then((i: any) => {
               let obj = {
                 banner: false,
                 banner_img: i.data.thumbnail,
@@ -83,14 +81,28 @@ onMounted(() => {
                   time: "2 days ago",
                 }]
               }
-              console.log(obj)
               productsList.value.push(obj as never)
-            }
-            catch (e) {
-              console.log({ e })
-            }
-          })
+              resolve(true)
+            })
+            .catch((err: any) => {
+              console.log(err)
+              reject(err)
+            })
+        })
       })
+
+  })
+}
+
+watchEffect(() => productsList.value.length > 0 && products.setProducts(productsList.value))
+
+onMounted(() => {
+  fetchProducts()
+    .then(() => {
+      console.log('done')
+    })
+    .catch((err) => {
+      console.log(err)
     })
 })
 </script>
