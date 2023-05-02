@@ -4,7 +4,42 @@ import ProductType from "~~/types/productType";
 
 export const useProductsStore = defineStore("products", {
   state: () => ({
-    products: productData as ProductType[],
+    products: [{
+      id: 1,
+      brand: 'Carregando...',
+      category: 'Carregando...',
+      colors: ['black', 'white', 'red'],
+      details: [
+        {
+          details_list: ['Carregando...'],
+          details_text: 'Carregando...',
+          details_text_2: 'Carregando...',
+        }
+      ],
+      img: '',
+      parentCategory: 'Carregando...',
+      price: 0,
+      quantity: 0,
+      rating: 0,
+      sm_desc: '',
+      title: '',
+      banner: false,
+      banner_img: '',
+      bestSeller: false,
+      big_img: '',
+      dimension: '',
+      new: false,
+      old_price: 0,
+      orderQuantity: 0,
+      sizes: ['s', 'm', 'l', 'xl'],
+      trending: false,
+      related_images: [],
+      reviews: [],
+      thumb_img: '',
+      sale_of_per: 0,
+      topRated: false,
+      weight: 0
+    }] as unknown as ProductType[],
     filterProducts: productData as ProductType[],
     priceRange: [0, 500] as any,
     activeCls : '' as string,

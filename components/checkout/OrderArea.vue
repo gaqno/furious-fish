@@ -46,7 +46,7 @@
                         <td>
                          <strong>
                             <span class="amount">
-                               ${{typeof ship_cost === 'number' && ship_cost > 0 ? 
+                               R${{typeof ship_cost === 'number' && ship_cost > 0 ? 
                                (state.totalPriceQuantity.total + ship_cost).toFixed(2) 
                                : state.totalPriceQuantity.total.toFixed(2)}}
                             </span>

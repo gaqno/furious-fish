@@ -5,6 +5,10 @@ export default defineNuxtConfig({
     "vue3-carousel/dist/carousel.css",
     "~/assets/scss/main.scss",
   ],
+  plugins: [
+    { src: "./plugins/vue-masonry-wall.ts", mode: "client" },
+    { src: "./plugins/vue3-toastify.ts", mode: "client" },
+  ],
   modules: [
     [
       '@pinia/nuxt',
@@ -15,6 +19,7 @@ export default defineNuxtConfig({
         ],
       },
     ],
+    'nuxt-icon'
   ],
   app: {
     head: {
@@ -29,6 +34,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
+      BASE_URL: process.env.BASE_URL,
       CLIENT_ID: process.env.CLIENT_ID,
       CLIENT_SECRET: process.env.CLIENT_SECRET,
       REDIRECT_URI: process.env.REDIRECT_URI,

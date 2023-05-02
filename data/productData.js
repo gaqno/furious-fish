@@ -91,8 +91,8 @@ const productData = [
         'Qui sequitur mutationem consuetudium lectorum.',
         'Claritas est etiam processus dynamicus.',
         'Qui sequitur mutationem consuetudium lectorum.'
-       ],
-       details_text_2:'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release.'
+      ],
+      details_text_2:'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release.'
     }
   },
   {

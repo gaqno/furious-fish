@@ -28,7 +28,7 @@
                   <span v-html="item.title"></span>
                 </nuxt-link>
                   <div class="product__price transition-3">
-                      <span>${{typeof item.price === 'number' ? item.price.toFixed(2) : item.price}}</span>
+                      <span>R${{typeof item.price === 'number' ? item.price.toFixed(2) : item.price}}</span>
                       <span v-if="item.old_price" class="old-price">${{item.old_price}}</span>
                   </div>
               </div>

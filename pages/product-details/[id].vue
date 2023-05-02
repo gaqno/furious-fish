@@ -21,7 +21,7 @@ export default defineComponent({
   setup() {
     const state = useProductsStore();
     const id = useRoute().params.id;
-    const item = state.products.find(p => Number(p.id) === Number(id))
+    const item = state.products.find(p => String(p.id) === String(id))
     useHead({
       title: "Product Details",
     });

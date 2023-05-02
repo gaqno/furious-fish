@@ -9,7 +9,8 @@
   },
   "devDependencies": {
     "@types/node": "^18.14.2",
-    "nuxt": "^3.2.3"
+    "nuxt": "^3.2.3",
+    "nuxt-icon": "^0.4.0"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.7",

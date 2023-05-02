@@ -1,25 +1,37 @@
 import axios from 'axios'
 
-const runtimeConfig = useRuntimeConfig()
+const callApi = (url: string, method: string, data?: any) => {
+  const runtimeConfig = useRuntimeConfig()
+  const token = runtimeConfig.public.ACCESS_TOKEN;
+  const BASE_URL = runtimeConfig.public.BASE_URL;
+  const config = {
+    headers: { Authorization: `Bearer ${token}` },
+    body: data,
+  };
 
+  switch (method) {
+    case 'GET':
+      return axios.get(BASE_URL + url, config)
+    case 'POST':
+      return axios.post(BASE_URL + url, data, config)
+    case 'PUT':
+      return axios.put(BASE_URL + url, data, config)
+    case 'DELETE':
+      return axios.delete(BASE_URL + url, config)
+    default:
+      return axios.get(BASE_URL + url, config)
+  }
+};
 
-const BASE_URL = 'https://api.mercadolibre.com';
 
 export async function getSeller() {
-  const token = 'APP_USR-6541576124916863-042921-632fc5c4df711d957a758547efb2b8a9-1361737006';
-  const response = await axios.get(`${BASE_URL}/users/1361737006`, {
-    headers: { Authorization: `Bearer ${token}` }
-  });
-  return response.data;
+  return callApi('/users/me', 'GET')
 }
 
 export async function getAllProducts(userId: number) {
-  const url = `https://api.mercadolibre.com/sites/MLB/search?seller_id=${userId}`;
-  const response = await axios.get(url, {
-    headers: {
-      Authorization: 'Bearer APP_USR-6541576124916863-042921-632fc5c4df711d957a758547efb2b8a9-1361737006',
-    },
-  });
-  const products = response.data.results;
-  return products;
+  return callApi(`/sites/MLB/search?seller_id=${userId}`, 'GET')
+}
+
+export async function getProductDetails(id: string) {
+  return callApi(`/items/${id}`, 'GET')
 }
