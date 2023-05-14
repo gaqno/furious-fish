@@ -75,7 +75,7 @@ const fetchProducts = () => {
                 weight: 0.25,
                 reviews: [{
                   children: true,
-                  img: "https://i.ibb.co/7RJ2Wbs/1.png",
+                  img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fm.iscaecompanhia.com.br%2Fp%2FVara-Lumis-Viper-VPC6017-6-17lb-60-180m-Carretilha-Inteirica%2F4098%2F36%2F&psig=AOvVaw0Av4aVTf1tLcHl5b6ji1px&ust=1684117589623000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNiqvIjh8_4CFQAAAAAdAAAAABAI",
                   name: "Geralt of Rivia",
                   rating: 5,
                   time: "2 days ago",

@@ -41,7 +41,7 @@ export const useProductsStore = defineStore("products", {
       weight: 0
     }] as unknown as ProductType[],
     filterProducts: productData as ProductType[],
-    priceRange: [0, 500] as any,
+    priceRange: [0, 2000] as any,
     activeCls : '' as string,
   }),
   actions: {
