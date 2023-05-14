@@ -1,6 +1,6 @@
 <template>
   <layout :transparent="true">
-    <breadcrumb-area title="Wishlist" subtitle="Wishlist"/>
+    <breadcrumb-area title="Lista de desejos" subtitle="Lista de desejos"/>
     <wishlist-area/>
   </layout>
 </template>
@@ -19,7 +19,7 @@ export default defineComponent({
   },
   setup() {
     useHead({
-      title: "Wishlist",
+      title: "Lista de desejos",
     });
   },
 });

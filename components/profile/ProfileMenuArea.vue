@@ -7,9 +7,9 @@
                 <h3 class="profile__menu-title"><i class="fa fa-list-alt"></i> Your Menu</h3>
                 <div class="profile__menu-tab">
                     <div class="nav nav-tabs flex-column justify-content-start text-start" id="nav-tab" role="tablist">
-                      <button class="nav-link active" id="nav-account-tab" data-bs-toggle="tab" data-bs-target="#nav-account" type="button" role="tab" aria-controls="nav-account" aria-selected="true"> <i class="fa fa-user"></i> My Account</button>
-                      <button class="nav-link" id="nav-order-tab" data-bs-toggle="tab" data-bs-target="#nav-order" type="button" role="tab" aria-controls="nav-order" aria-selected="false"><i class="fa fa-file"></i>Orders</button>
-                      <button class="nav-link" id="nav-password-tab" data-bs-toggle="tab" data-bs-target="#nav-password" type="button" role="tab" aria-controls="nav-password" aria-selected="false"><i class="fa fa-lock"></i>Change Password</button>
+                      <button class="nav-link active" id="nav-account-tab" data-bs-toggle="tab" data-bs-target="#nav-account" type="button" role="tab" aria-controls="nav-account" aria-selected="true"> <i class="fa fa-user"></i> Minha conta</button>
+                      <button class="nav-link" id="nav-order-tab" data-bs-toggle="tab" data-bs-target="#nav-order" type="button" role="tab" aria-controls="nav-order" aria-selected="false"><i class="fa fa-file"></i>Pedidos</button>
+                      <button class="nav-link" id="nav-password-tab" data-bs-toggle="tab" data-bs-target="#nav-password" type="button" role="tab" aria-controls="nav-password" aria-selected="false"><i class="fa fa-lock"></i>Trocar senha</button>
                       <button class="nav-link"><i class="fa fa-sign-out"></i> Logout</button>
                     </div>
                 </div>
@@ -21,29 +21,29 @@
                     <div class="tab-pane fade show active" id="nav-account" role="tabpanel" aria-labelledby="nav-account-tab">
                       <div class="profile__info">
                           <div class="profile__info-top d-flex justify-content-between align-items-center">
-                            <h3 class="profile__info-title">Profile Information</h3>
+                            <h3 class="profile__info-title">Informações de Perfil</h3>
                             <button class="profile__info-btn" type="button" data-bs-toggle="modal" data-bs-target="#profile_edit_modal">
-                              <i class="fa-regular fa-pen-to-square"></i> Edit Profile
+                              <i class="fa-regular fa-pen-to-square"></i> Editar perfil
                             </button>
                           </div>
                           <div class="profile__info-wrapper white-bg">
                             <div class="profile__info-item">
-                                <p>Name</p>
-                                <h4>John Smith</h4>
+                                <p>Nome</p>
+                                <h4>Gabriel Aquino</h4>
                             </div>
                             <div class="profile__info-item">
                                 <p>Email</p>
                                 <h4>
-                                  <a href="mailt:outstock@hotmail.com" class="__cf_email__" data-cfemail="94fdfaf2fbd4f1f0e1fff1e6baf7fbf9">outstock@hotmail.com</a>
+                                  <a href="rogerio@pescafuriosa.com" class="__cf_email__" data-cfemail="94fdfaf2fbd4f1f0e1fff1e6baf7fbf9">outstock@hotmail.com</a>
                                 </h4>
                             </div>
                             <div class="profile__info-item">
                                 <p>Phone</p>
-                                <h4>(325) 463-5693</h4>
+                                <h4>+55 11 98901-7530</h4>
                             </div>
                             <div class="profile__info-item">
-                                <p>Address</p>
-                                <h4>Abingdon, Maryland(MD), 21009</h4>
+                                <p>Endereço</p>
+                                <h4>Rua Antonio de Couros, 182 - Sala 1, SP - BR.</h4>
                             </div>
                           </div>
                       </div>
@@ -91,7 +91,7 @@
                     <div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
                       <div class="password__change">
                           <div class="password__change-top">
-                            <h3 class="password__change-title">Change Password</h3>
+                            <h3 class="password__change-title">Trocar senha</h3>
                           </div>
                           <div class="password__form white-bg">
                             <!-- form start -->

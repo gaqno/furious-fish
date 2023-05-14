@@ -14,7 +14,7 @@
                   <div class="slider__content slider__content-4">
                       <h2 v-html="item.title"></h2>
                       <p>{{item.subtile}}</p>
-                      <a href="#" class="os-btn os-btn-2 hero-slider-btn">Discover now</a>
+                      <a href="#" class="os-btn os-btn-2 hero-slider-btn">Ver +</a>
                   </div>
               </div>
           </div>

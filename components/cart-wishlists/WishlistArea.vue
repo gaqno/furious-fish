@@ -5,9 +5,9 @@
         <div class="row">
             <div class="col-12">
               <div v-if="state.wishlists.length === 0" class='text-center'>
-                  <h3>No wishlist product</h3>
+                  <h3>Sem produtos na lista de desejos</h3>
                   <nuxt-link class="os-btn os-btn-black mt-20" to="/shop">
-                     Shop Now
+                    Buscar items
                   </nuxt-link>
                 </div>
                 <form v-if="state.wishlists.length > 0" action="#">

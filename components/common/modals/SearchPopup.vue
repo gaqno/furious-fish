@@ -11,7 +11,7 @@
                             </a>
                         </div>
                         <div class="header__search-header">
-                            <h3>Search</h3>
+                            <h3>Busca</h3>
                         </div>
                         <div class="header__search-categories">
                             <ul class="search-category">

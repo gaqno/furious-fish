@@ -11,7 +11,7 @@
       </nuxt-link>
     </td>
     <td class="product-price">
-      <span class="amount">${{ item.price }}</span>
+      <span class="amount">R${{ item.price }}</span>
     </td>
     <td class="product-quantity">
       <div class="cart-plus-minus">
@@ -23,12 +23,9 @@
       </div>
     </td>
     <td class="product-subtotal">
-      <span class="amount"
-        >${{
-          typeof item.orderQuantity !== "undefined" &&
-          item.price * item.orderQuantity
-        }}</span
-      >
+      <span class="amount">
+        R${{ typeof item.orderQuantity !== "undefined" && item.price * item.orderQuantity }}
+      </span>
     </td>
     <td class="product-remove" @click.prevent="state.remover_cart_products(item)">
       <a href="#">

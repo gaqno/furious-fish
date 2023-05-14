@@ -29,11 +29,11 @@
                                     <ul>
                                         <li>
                                             <a @click.prevent="handleOpenSearchBar" href="#" class="search-toggle">
-                                                <i class="ion-ios-search-strong"></i> Search
+                                                <i class="ion-ios-search-strong"></i> Buscar
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" class="cart"><i class="ion-bag"></i> Cart
+                                            <a href="#" class="cart"><i class="ion-bag"></i> Carrinho
                                                 <span>({{ state.totalPriceQuantity.quantity }})</span>
                                             </a>
                                             <!-- cart mini start -->
@@ -53,11 +53,11 @@
                                 <ul>
                                     <li>
                                         <a @click.prevent="handleOpenSearchBar" href="#" class="search-toggle">
-                                            <i class="ion-ios-search-strong"></i> Search
+                                            <i class="ion-ios-search-strong"></i> Buscar
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="cart"><i class="ion-bag"></i> Cart
+                                        <a href="#" class="cart"><i class="ion-bag"></i> Carrinho
                                             <span>({{ state.totalPriceQuantity.quantity }})</span>
                                         </a>
                                         <!-- cart mini start -->

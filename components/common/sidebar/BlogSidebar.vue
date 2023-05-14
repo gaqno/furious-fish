@@ -3,7 +3,7 @@
     <div class="sidebar__widget mb-55">
       <div class="widget__search p-relative">
         <form action="#">
-          <input type="text" placeholder="Search..." />
+          <input type="text" placeholder="Buscar..." />
           <button type="submit"><i class="far fa-search"></i></button>
         </form>
       </div>

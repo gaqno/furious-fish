@@ -1,6 +1,6 @@
 <template>
   <layout :transparent="true">
-    <breadcrumb-area title="Product Details" subtitle="Product Details"/>
+    <breadcrumb-area title="Detalhes do produto" subtitle="Detalhes do produto"/>
     <shop-details-area :item="state.products[0]"/>
   </layout>
 </template> 
@@ -21,7 +21,7 @@ export default defineComponent({
   setup() {
     const state = useProductsStore();
     useHead({
-      title: "Product Details",
+      title: "Detalhes do produto",
     });
     return {state}
   },

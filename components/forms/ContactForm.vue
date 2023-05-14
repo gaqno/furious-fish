@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-xl-6 col-lg-6">
         <div class="contact__input mb-20">
-          <label>Name <span class="required">*</span></label>
+          <label>Nome <span class="required">*</span></label>
           <Field name="name" type="text" />
           <ErrorMessage name="name" class="text-danger" />
         </div>
@@ -19,7 +19,7 @@
     <div class="row">
       <div class="col-xl-12">
         <div class="contact__input mb-20">
-          <label>Subject <span class="required">*</span></label>
+          <label>Assunto <span class="required">*</span></label>
           <Field name="subject" type="text" />
           <ErrorMessage name="subject" class="text-danger" />
         </div>
@@ -28,7 +28,7 @@
     <div class="row">
       <div class="col-xl-12">
         <div class="contact__input mb-45">
-          <label>Message</label>
+          <label>Mensagem</label>
           <Field name="msg" v-slot="{ field }">
             <textarea v-bind="field" name="msg" cols="30" rows="10"></textarea>
           </Field>
@@ -40,7 +40,7 @@
       <div class="col-xl-12">
         <div class="contact__submit">
           <button type="submit" class="os-btn os-btn-black">
-            Send Message
+            Enviar mensagem
           </button>
         </div>
       </div>

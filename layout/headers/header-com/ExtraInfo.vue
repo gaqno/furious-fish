@@ -3,38 +3,14 @@
         <li>
             <div class="my-account">
                 <div class="extra-title">
-                    <h5>My Account</h5>
+                    <h5>Minha conta</h5>
                 </div>
                 <ul>
-                    <li><nuxt-link href="/account">My Account</nuxt-link></li>
-                    <li><nuxt-link href="/wishlist">Wishlist</nuxt-link></li>
-                    <li><nuxt-link href="/cart">Cart</nuxt-link></li>
+                    <li><nuxt-link href="/account">Minha conta</nuxt-link></li>
+                    <li><nuxt-link href="/wishlist">Lista de desejos</nuxt-link></li>
+                    <li><nuxt-link href="/cart">Carrinho</nuxt-link></li>
                     <li><nuxt-link href="/checkout">Checkout</nuxt-link></li>
-                    <li><nuxt-link href="/register">Create Account</nuxt-link></li>
-                </ul>
-            </div>
-        </li>
-        <li>
-            <div class="lang">
-                <div class="extra-title">
-                    <h5>Language</h5>
-                </div>
-                <ul>
-                    <li><a href="#">English</a></li>
-                    <li><a href="#">France</a></li>
-                    <li><a href="#">Germany</a></li>
-                    <li><a href="#">Bangla</a></li>
-                </ul>
-            </div>
-        </li>
-        <li>
-            <div class="currency">
-                <div class="extra-title">
-                    <h5>currency</h5>
-                </div>
-                <ul>
-                    <li><a href="#">BRL - Real Brasileiro</a></li>
-                    <li><a href="#">USD - US Dollar</a></li>
+                    <li><nuxt-link href="/register">Criar conta</nuxt-link></li>
                 </ul>
             </div>
         </li>

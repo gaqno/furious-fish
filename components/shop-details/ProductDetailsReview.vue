@@ -36,9 +36,9 @@
       </div>
       <div class="post-comments-form mb-100">
           <div class="post-comments-title mb-30">
-              <h3>Your Review</h3>
+              <h3>Avalie o produto!</h3>
               <div class="post-rating">
-                  <span>Your Rating :</span>
+                  <span>Sua avaliação :</span>
                   <ul>
                       <li>
                           <a href="#">

@@ -5,11 +5,11 @@
         <div class="col-xl-12">
           <div :class="`section__title-wrapper text-center mb-55 ${style_2 ? 'p-relative' : ''}`">
             <div class="section__title mb-10">
-              <h2>Trending Products</h2>
+              <h2>Produtos em alta</h2>
             </div>
             <div class="section__sub-title">
               <p>
-                Mirum est notare quam littera gothica quam nunc putamus parum claram!
+                Produtos mais vendidos da loja 
               </p>
             </div>
           </div>

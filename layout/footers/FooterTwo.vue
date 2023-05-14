@@ -58,10 +58,10 @@ export default defineComponent({
             id: 1,
             title: 'My Account',
             links: [
-              {link:"#", list: 'My Account' },
+              {link:"#", list: 'Minha conta' },
               {link:"#", list: 'Checkout' },
-              {link:"#", list: 'Shopping Cart' },
-              {link:"#", list: 'Wishlist' },
+              {link:"#", list: 'Carrinho de compras' },
+              {link:"#", list: 'Lista de desejos' },
               {link:"#", list: 'Custom Link' },
             ]
           },
@@ -92,7 +92,7 @@ export default defineComponent({
             title: 'Customer Service',
             links: [
               {link:"#", list: 'Shipping Policy' },
-              {link:"#", list: 'Help & Contact Us' },
+              {link:"#", list: 'Ajuda & Contato' },
               {link:"#", list: 'Returns & Refunds' },
               {link:"#", list: 'Online Stores' },
               {link:"#", list: 'Terms & Conditions' },

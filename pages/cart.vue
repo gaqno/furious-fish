@@ -1,6 +1,6 @@
 <template>
   <layout :transparent="true">
-    <breadcrumb-area title="Cart" subtitle="Cart"/>
+    <breadcrumb-area title="Carrinho" subtitle="Carrinho"/>
     <cart-area/>
   </layout>
 </template>
@@ -19,7 +19,7 @@ export default defineComponent({
   },
   setup() {
     useHead({
-      title: "Cart",
+      title: "Carrinho",
     });
   },
 });

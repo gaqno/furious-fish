@@ -6,7 +6,7 @@
                   <img class="product__thumb-2" :src="item.thumb_img" alt="product-img">
               </nuxt-link>
               <div class="product__action transition-3">
-                  <a @click.prevent="wishlistState.add_wishlist_product(item)" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Wishlist">
+                  <a @click.prevent="wishlistState.add_wishlist_product(item)" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Adicionar a lista de desejos">
                       <i class="fal fa-heart"></i>
                   </a>
                   <a @click.prevent="compareState.add_compare_product(item)" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Compare">
@@ -29,11 +29,11 @@
                 </nuxt-link>
                   <div class="product__price transition-3">
                       <span>R${{typeof item.price === 'number' ? item.price.toFixed(2) : item.price}}</span>
-                      <span v-if="item.old_price" class="old-price">${{item.old_price}}</span>
+                      <span v-if="item.old_price" class="old-price">R${{item.old_price}}</span>
                   </div>
               </div>
               <div class="add-cart p-absolute transition-3">
-                  <a @click.prevent="store.add_cart_product(item)" href="#">+ Add to Cart</a>
+                  <a @click.prevent="store.add_cart_product(item)" href="#">+ Carrinho</a>
               </div>
           </div>
       </div>

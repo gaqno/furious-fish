@@ -24,7 +24,7 @@
                     <span v-html="item.parentTitle"></span>
                   </nuxt-link>
                 </h5>
-                <nuxt-link href="/shop" class="link-btn">Discover now</nuxt-link>
+                <nuxt-link href="/shop" class="link-btn">Ver +</nuxt-link>
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@
           </nuxt-link>
           <div class="product__action-3 transition-3">
               <a @click.prevent="store.add_cart_product(item)" href="#" class="action-btn"> 
-                <i class="fal fa-plus"></i>Add to cart
+                <i class="fal fa-plus"></i>+ Carrinho
               </a>
               <a @click.prevent="store.initialOrderQuantity" href="#" class="action-btn" data-bs-toggle="modal" :data-bs-target="`#productModalId-${item.id}`">
                 <i class="fal fa-eye"></i>
@@ -33,8 +33,8 @@
                 </nuxt-link>
               </h4>
               <div class="product__price-3">
-                  <span>${{item.price.toFixed(2)}}</span>
-                  <span v-if="item.old_price" class="old-price"><del>${{item.old_price}}</del></span>
+                  <span>R${{item.price.toFixed(2)}}</span>
+                  <span v-if="item.old_price" class="old-price"><del>R${{item.old_price}}</del></span>
               </div>
           </div>
       </div>

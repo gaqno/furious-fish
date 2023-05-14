@@ -18,8 +18,8 @@
           </span>
       </div>
       <div class="product__price-2 mb-25">
-        <span>${{item.price.toFixed(2)}}</span>
-        <span v-if="item.old_price" class="old-price">${{item.old_price}}</span>
+        <span>R${{item.price.toFixed(2)}}</span>
+        <span v-if="item.old_price" class="old-price">R${{item.old_price}}</span>
       </div>
       <div class="product__modal-des mb-30">
           <p>{{item.sm_desc}}</p>
@@ -54,9 +54,9 @@
                         <div @click="state.orderQuantity++" class="inc qtybutton">+</div>
                     </div>
                   </div>
-                  <div class="pro-cart-btn ml-20">
+                  <div class="pro-cart-btn ml-20 pt-4">
                       <a @click.prevent="state.add_cart_product(item)" href="#" 
-                      class="os-btn os-btn-black os-btn-3 mr-10">+ Add to Cart</a>
+                      class="os-btn os-btn-black os-btn-3 mr-10">+ Carrinho</a>
                   </div>
               </div>
           </form>

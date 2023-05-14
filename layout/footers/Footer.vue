@@ -20,7 +20,7 @@
                                                 <i class="fal fa-map-marker-alt"></i>
                                             </div>
                                             <div class="text">
-                                                <span>Add: 1234 Heaven Stress, Beverly Hill, Melbourne, USA.</span>
+                                                <span>Add: Rua Antonio de Couros, 182 - Sala 1, SP - BR.</span>
                                             </div>
                                         </li>
                                         <li>
@@ -28,7 +28,7 @@
                                                 <i class="fal fa-envelope-open-text"></i>
                                             </div>
                                             <div class="text">
-                                                <span>Email: Contact@basictheme.com</span>
+                                                <span>Email: rogerio@pescafuriosa.com</span>
                                             </div>
                                         </li>
                                         <li>
@@ -36,7 +36,7 @@
                                                 <i class="fal fa-phone-alt"></i>
                                             </div>
                                             <div class="text">
-                                                <span>Phone Number: (800) 123 456 789</span>
+                                                <span>WhatsApp: +55 11 98901-7530</span>
                                             </div>
                                         </li>
                                     </ul>
@@ -52,11 +52,9 @@
                             <div class="footer__widget-content">
                                 <div class="footer__links">
                                     <ul>
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Careers</a></li>
-                                        <li><a href="#">Delivery Inforamtion</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
-                                        <li><a href="#">Terms & Condition</a></li>
+                                        <li><a href="#">Sobre nós</a></li>
+                                        <li><a href="#">Informações sobre entrega</a></li>
+                                        <li><a href="#">Termos & Condições</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -65,15 +63,12 @@
                     <div class="col-xl-3 col-lg-3 col-md-3 col-12">
                         <div class="footer__widget mb-30">
                             <div class="footer__widget-title mb-25">
-                                <h5>Customer Service</h5>
+                                <h5>Atendimento ao Cliente</h5>
                             </div>
                             <div class="footer__widget-content">
                                 <div class="footer__links">
                                     <ul>
-                                        <li><a href="#">Shipping Policy</a></li>
-                                        <li><a href="#">Help & Contact Us</a></li>
                                         <li><a href="#">Returns & Refunds</a></li>
-                                        <li><a href="#">Online Stores</a></li>
                                         <li><a href="#">Terms & Conditions</a></li>
                                     </ul>
                                 </div>
@@ -88,8 +83,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-7">
                         <div class="footer__copyright">
-                            <p>Copyright {{ new Date().getFullYear() }} © <nuxt-link href="/">Outstock</nuxt-link> all rights
-                                reserved. Powered by <nuxt-link href="/">Theme_pure</nuxt-link></p>
+                            <p>Copyright {{ new Date().getFullYear() }} © <nuxt-link href="/">Pesca Furiosa</nuxt-link> Todos os direitos reservados. <br/> Desenvolvido por <nuxt-link href="https://www.linkedin.com/in/gaqno" target="_blank">gaqno development</nuxt-link></p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-5">

@@ -5,10 +5,10 @@
       <CategoryArea :style_2="true" />
       <TrendingProductTwo />
       <ShopBanner :style_2="true" />
-      <SaleOffAreaTwo />
+      <!-- <SaleOffAreaTwo /> -->
       <!-- <BlogArea/> -->
-    <ClientBrandSlider :style_2="true" />
-      <SubscribeArea :style_2="true" />
+    <!-- <ClientBrandSlider :style_2="true" /> -->
+      <!-- <SubscribeArea :style_2="true" /> -->
     </main>
   </LayoutTwo>
 </template>
@@ -82,6 +82,7 @@ const fetchProducts = () => {
                 }]
               }
               productsList.value.push(obj as never)
+              products.setProducts(productsList.value)
               resolve(true)
             })
             .catch((err: any) => {
@@ -90,11 +91,12 @@ const fetchProducts = () => {
             })
         })
       })
-
+      .catch((err: any) => {
+        console.log(err)
+        reject(err)
+      })
   })
 }
-
-watchEffect(() => productsList.value.length > 0 && products.setProducts(productsList.value))
 
 onMounted(() => {
   fetchProducts()

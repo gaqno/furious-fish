@@ -16,7 +16,7 @@
                 <nuxt-link
                   href="/shop"
                   class="os-btn os-btn-2 hero-slider-btn">
-                  Discover now
+                  Ver +
                 </nuxt-link>
               </div>
             </div>

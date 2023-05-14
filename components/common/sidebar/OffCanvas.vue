@@ -119,8 +119,8 @@ export default defineComponent({
         title: "Other Pages",
         dropdown: true,
         dropdownMenu: [
-          { link: "/wishlist", title: "Wishlist" },
-          { link: "/cart", title: "Cart" },
+          { link: "/wishlist", title: "Lista de desejos" },
+          { link: "/cart", title: "Carrinho" },
           { link: "/compare", title: "Compare" },
           { link: "/checkout", title: "Checkout" },
           { link: "/register", title: "Register" },

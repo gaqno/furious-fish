@@ -6,33 +6,32 @@
           <div class="coupon-accordion">
             <!-- ACCORDION START -->
             <h3>
-              Returning customer?
-              <span @click="handleCheckoutLogin" id="showlogin">Click here to login</span>
+              Já possui conta?
+              <span @click="handleCheckoutLogin" id="showlogin">Clique aqui para logar!</span>
             </h3>
             <div v-if="checkoutLogin" id="checkout-login" class="coupon-content">
               <div class="coupon-info">
                 <p class="coupon-text">
-                  Quisque gravida turpis sit amet nulla posuere lacinia. Cras
-                  sed est sit amet ipsum luctus.
+                  Tem cupom? Informe abaixo para verificar a disponibilidade!
                 </p>
                 <form @submit.prevent="handleSubmit">
                   <p class="form-row-first">
-                    <label>Username or email <span class="required">*</span></label>
+                    <label>Email <span class="required">*</span></label>
                     <input type="text" v-model="formValue.name_or_email" />
                   </p>
                   <p class="form-row-last">
-                    <label>Password <span class="required">*</span></label>
+                    <label>Senha <span class="required">*</span></label>
                     <input type="text" v-model="formValue.password" />
                   </p>
                   <p class="form-row">
                     <button class="os-btn os-btn-black" type="submit">Login</button>
                     <label>
                       <input type="checkbox" v-model="formValue.isChecked" />
-                      Remember me
+                      Lembrar-se de mim
                     </label>
                   </p>
                   <p class="lost-password">
-                    <nuxt-link href="/login">Lost your password?</nuxt-link>
+                    <nuxt-link href="/login">Esqueceu sua senha?</nuxt-link>
                   </p>
                 </form>
               </div>
@@ -44,15 +43,15 @@
           <div class="coupon-accordion">
             <!-- ACCORDION START -->
             <h3>
-              Have a coupon?
-              <span @click="handleCheckoutCoupon" id="showcoupon">Click here to enter your code</span>
+              Tem cupom?
+              <span @click="handleCheckoutCoupon" id="showcoupon">Escreva aqui seu cupom para verificar disponibilidade.</span>
             </h3>
             <div v-if="checkoutCoupon" id="checkout_coupon" class="coupon-checkout-content">
               <div class="coupon-info">
                 <form @submit.prevent="handleCouponSubmit">
                   <p class="checkout-coupon">
-                    <input v-model="couponVal" type="text" placeholder="Coupon Code" />
-                    <button class="os-btn os-btn-black" type="submit">Apply Coupon</button>
+                    <input v-model="couponVal" type="text" placeholder="Cupom" />
+                    <button class="os-btn os-btn-black" type="submit">Aplicar cupom</button>
                   </p>
                 </form>
               </div>

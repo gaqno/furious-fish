@@ -1,6 +1,6 @@
 <template>
   <layout :transparent="true">
-    <breadcrumb-area title="Product Details" subtitle="Product Details"/>
+    <breadcrumb-area title="Detalhes do produto" subtitle="Detalhes do produto"/>
     <shop-details-area :item="item"/>
   </layout>
 </template> 
@@ -23,7 +23,7 @@ export default defineComponent({
     const id = useRoute().params.id;
     const item = state.products.find(p => String(p.id) === String(id))
     useHead({
-      title: "Product Details",
+      title: "Detalhes do produto",
     });
     return {item}
   },

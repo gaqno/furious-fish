@@ -1,6 +1,6 @@
 <template>
   <layout :transparent="true">
-    <breadcrumb-area title="Contact" subtitle="Contact"/>
+    <breadcrumb-area title="Contato" subtitle="Contato"/>
     <contact-area/>
   </layout>
 </template>
@@ -19,7 +19,7 @@ export default defineComponent({
   },
   setup() {
     useHead({
-      title: "Contact",
+      title: "Contato",
     });
   },
 });

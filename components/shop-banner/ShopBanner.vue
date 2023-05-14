@@ -17,9 +17,7 @@
                 <img :src="item.banner_img" alt="banner" />
               </nuxt-link>
             </div>
-            <div
-              :class="`banner__content-2 ${style_3 ? 'banner__content-4' : ''} ${item.id !== 1 && style_3 ? 'banner__content-4-right' : ''} p-absolute transition-3`"
-            >
+            <div :class="`banner__content-2 ${style_3 ? 'banner__content-4' : ''} ${item.id !== 1 && style_3 ? 'banner__content-4-right' : ''} p-absolute transition-3`">
               <span>Products {{ item.category }}</span>
               <h4>
                 <nuxt-link :href="`/product-details/${item.id}`">{{ item.title }}</nuxt-link>
@@ -29,7 +27,7 @@
               </p>
               <nuxt-link :href="`/product-details/${item.id}`" class="os-btn os-btn-2">
                 buy now /
-                <span>${{ item.price }}</span>
+                <span>R${{ item.price }}</span>
               </nuxt-link>
             </div>
           </div>

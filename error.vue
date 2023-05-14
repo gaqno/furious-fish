@@ -10,12 +10,9 @@
               <h1>{{error.statusCode}}</h1>
             </div>
             <span>not found {{error.message}}</span>
-            <h2>Nothing To See Here!</h2>
+            <h2>Nada pra ver aqui!</h2>
             <p>
-              The page are looking for has been moved or doesn’t exist anymore,
-              if you like you can return to our homepage. If the problem
-              persists, please send us an email to
-              <span class="highlight comment">basictheme400@gmail.com</span>
+              A página que você está procurando não existe ou foi movida.
             </p>
 
             <div class="error__search">

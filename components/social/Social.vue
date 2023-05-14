@@ -26,18 +26,6 @@ export default {
           icon: "fab fa-twitter",
           name: "Twitter",
         },
-        {
-          link: "https://www.behance.net/",
-          target: "_blank",
-          icon: "fab fa-behance",
-          name: "Behance",
-        },
-        {
-          link: "https://dribbble.com/",
-          target: "_blank",
-          icon: "fab fa-dribbble",
-          name: "Dribbble",
-        },
       ],
     };
   },

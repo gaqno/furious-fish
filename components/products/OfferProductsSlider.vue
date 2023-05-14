@@ -6,7 +6,7 @@
         <div class="col-xl-4 col-lg-4 col-md-6">
           <div class="product__offer-inner mb-30">
             <div class="product__title mb-60">
-              <h4>Trending Products</h4>
+              <h4>Produtos em alta!</h4>
             </div>
             <div class="product__offer-slider p-relative">
               <Carousel
@@ -48,7 +48,7 @@
         </div>
         <!-- Trending Products end -->
 
-         <!-- sale off Products start  -->
+        <!-- sale off Products start  -->
         <div class="col-xl-4 col-lg-4 col-md-6">
           <div class="product__offer-inner mb-30">
             <div class="product__title mb-60">
@@ -92,7 +92,7 @@
             </div>
           </div>
         </div>
-         <!-- sale off Products end  -->
+        <!-- sale off Products end  -->
 
         <!-- Top Rated Products start  -->
         <div class="col-xl-4 col-lg-4 col-md-6">

@@ -10,16 +10,17 @@
                     </div>
                     <div class="profile__basic-content">
                       <h3 class="profile__basic-title">
-                          Welcome Back <span>Admin</span>
+                          Bem vindo de volta, <span>Admin</span>
                       </h3>
-                      <p>{{state.cart_products.length}} Running Products <nuxt-link href="/cart">View Cart</nuxt-link></p>
+                      <p>{{state.cart_products.length}} Produtos no carrinho</p>
+                      <nuxt-link href="/cart">Ir para carrinho</nuxt-link>
                     </div>
                 </div>
               </div>
               <div class="col-xxl-6 col-md-6">
                 <div class="profile__basic-cart d-flex align-items-center justify-content-md-end">
                     <div class="cart-info mr-10">
-                      <nuxt-link href="/cart">View cart</nuxt-link>
+                      <nuxt-link href="/cart">Ir para carrinho</nuxt-link>
                     </div>
                     <div class="cart-item">
                       <nuxt-link href="/cart">

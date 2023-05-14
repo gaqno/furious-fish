@@ -16,8 +16,7 @@
                             </div>
                         </li>
                     </ul>
-                    <p>Outstock is a premium Templates theme with advanced admin module. It’s extremely customizable, easy to use and fully responsive and retina ready. Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-
+                    <p>A Pesca Furiosa é uma loja online especializada em artigos de pesca e afins, com uma ampla variedade de produtos para atender a todos os tipos de pescadores. Nossa loja é conhecida por oferecer uma experiência de compra fácil e acessível, com uma plataforma responsiva e totalmente personalizável. Todos os nossos produtos são selecionados cuidadosamente para garantir a qualidade e a satisfação de nossos clientes. Junte-se à Pesca Furiosa e descubra o mundo da pesca com excelência e estilo.</p>
                     <div class="contact__social">
                         <ul>
                             <social/>
@@ -27,7 +26,7 @@
             </div>
             <div class="col-xl-6 col-lg-6">
                 <div class="contact__form">
-                    <h3>Contact Us.</h3>
+                    <h3>Entre em contato!</h3>
                     <!-- form start -->
                     <contact-form/>
                     <!-- form end -->
@@ -56,20 +55,20 @@ export default defineComponent({
     const contactInfo = [
         {
           icon: 'fal fa-map-marker-alt',
-          title: 'Address',
-          subtitle: '1234 Heaven Stress, Beverly Hill, Melbourne, USA.'
+          title: 'Endereço',
+          subtitle: 'R. Antonio de Couros, 182 - SALA 1.'
         },
         {
           icon: 'fal fa-envelope-open-text',
           title: 'Email',
-          subtitle: 'Contact@erentheme.com'
+          subtitle: 'rogerio@pescafuriosa.com'
         },
         {
           icon: 'fal fa-phone-alt',
-          title: 'Number Phone',
-          subtitle: '(800) 123 456 789, (800) 987 654 321'
+          title: 'WhatsApp',
+          subtitle: '+55 11 98901-7530'
         },
-     ] as InfoData[]
+    ] as InfoData[]
     return {contactInfo}
   }
 })

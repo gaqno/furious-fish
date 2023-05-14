@@ -1,19 +1,19 @@
 <template>
   <form action="#">
       <div class="password__input">
-        <p>Old Password</p>
-        <input type="password" placeholder="Enter Old Password">
+        <p>Senha antiga</p>
+        <input type="password" placeholder="Digite a ANTIGA senha">
       </div>
       <div class="password__input">
-        <p>New Password</p>
-        <input type="password" placeholder="Enter New Password">
+        <p>Nova senha</p>
+        <input type="password" placeholder="Digite a NOVA senha">
       </div>
       <div class="password__input">
-        <p>Confirm Password</p>
-        <input type="password" placeholder="Confirm Password">
+        <p>Confirmar senha</p>
+        <input type="password" placeholder="Confirme a senha">
       </div>
       <div class="password__input">
-        <button type="submit" class="os-btn os-btn-black">Update password</button>
+        <button type="submit" class="os-btn os-btn-black">Atualizar senha</button>
       </div>
   </form>
 </template>

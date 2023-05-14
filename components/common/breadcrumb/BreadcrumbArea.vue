@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import bg from '~/assets/img/page-title/page-title-1.jpg';
+import bg from '~/assets/img/page-title/page-title-1.png';
 
 export default defineComponent({
   props:{

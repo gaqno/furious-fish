@@ -61,7 +61,7 @@ export const useCartStore = defineStore('cart', {
       localStorage.setItem('cart_products', JSON.stringify(this.cart_products));
     },
     clear_cart () {
-      const confirmMsg = window.confirm('Are you sure deleted your all cart items ?');
+      const confirmMsg = window.confirm('Tem certeza que deseja limpar seu carrinho ?');
       if(confirmMsg){
         this.cart_products = [];
       }

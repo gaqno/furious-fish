@@ -46,7 +46,7 @@
                             </nuxt-link>
                           </h4>
                           <nuxt-link :href="`/product-details/${big_item_1.id}`" class="link-btn">
-                            discover now
+                            Ver +
                           </nuxt-link>
                       </div>
                   </div>

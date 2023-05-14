@@ -5,50 +5,10 @@ export default {
     return {
       menuData: [
         {
-          link: '/',
-          title: 'Início',
-          hasDropdown: true,
-          megamenu: false,
-          dropdownItems: [
-            { link: '/', title: 'Início' },
-          ]
-        },
-        {
           link: '/shop',
-          title: 'Shop',
-          hasDropdown: true,
-          megamenu: true,
-          dropdownItems: [
-            {
-              link: '/shop',
-              title: 'Shop Pages',
-              dropdownMenu: [
-                { link: '/shop', title: 'Standard Shop Page' },
-                // { link: '/shop-right', title: 'Shop Right Sidebar' },
-                // { link: '/shop-4-col', title: 'Shop 4 Column' },
-                // { link: '/shop-3-col', title: 'Shop 3 Column' },
-              ]
-            },
-            {
-              link: '/shop',
-              title: 'Products Pages',
-              dropdownMenu: [
-                { link: '/product-details', title: 'Product Details' },
-              ]
-            },
-            {
-              link: '/shop',
-              title: 'Other Shop Pages',
-              dropdownMenu: [
-                { link: '/wishlist', title: 'Wishlist' },
-                { link: '/compare', title: 'Compare' },
-                { link: '/cart', title: 'Shopping Cart' },
-                { link: '/checkout', title: 'Checkout' },
-                { link: '/register', title: 'Register' },
-                { link: '/login', title: 'Login' },
-              ]
-            },
-          ]
+          title: 'Produtos',
+          hasDropdown: false,
+          megamenu: false,
         },
         {
           link: '/blog',
@@ -67,22 +27,22 @@ export default {
         },
         {
           link: '/shop',
-          title: 'Pages',
+          title: 'Atalhos',
           hasDropdown: true,
           megamenu: false,
           dropdownItems: [
-            { link: '/wishlist', title: 'Wishlist' },
-            { link: '/cart', title: 'Shopping Cart' },
+            { link: '/wishlist', title: 'Lista de desejos' },
+            { link: '/cart', title: 'Carrinho de compras' },
             { link: '/checkout', title: 'Checkout' },
-            { link: '/account', title: 'Account' },
-            { link: '/register', title: 'Register' },
+            { link: '/account', title: 'Minha conta' },
+            { link: '/register', title: 'Registrar' },
             { link: '/login', title: 'Login' },
             { link: '/404', title: 'Error 404' },
           ]
         },
         {
           link: '/contact',
-          title: 'Contact',
+          title: 'Contato',
         },
       ] as menuType[]
     }

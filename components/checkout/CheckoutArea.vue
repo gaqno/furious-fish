@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="checkbox-form">
-              <h3>Billing Details</h3>
+              <h3>Informações do cliente</h3>
               <!-- billing details start -->
               <billing-details />
               <!-- billing details end -->

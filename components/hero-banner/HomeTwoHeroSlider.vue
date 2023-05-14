@@ -22,7 +22,7 @@
                   :class="`os-btn ${item.isDark ? 'os-btn-white' : 'os-btn-2'} hero-slider-btn`"
                   data-animation="fadeInUp"
                   data-delay=".6s">
-                  Discover now
+                  Ver +
                 </a>
               </div>
             </div>
@@ -43,7 +43,7 @@ import { Carousel, Slide, Pagination } from "vue3-carousel";
 import { HeroSliderTypeTwo } from "~/types/HeroSliderDataType";
 import slider_img_1 from "~/assets/img/slider/03/slider-01.jpg";
 import slider_img_2 from "~/assets/img/slider/03/slider-02.jpg";
-import slider_img_3 from "~/assets/img/slider/03/slider-03.jpg";
+import slider_img_3 from "~/assets/img/slider/03/slider-03.png";
 
 export default defineComponent({
   components: { Carousel, Slide, Pagination },
@@ -53,9 +53,9 @@ export default defineComponent({
         id: 1,
         bgImg: slider_img_1,
         isDark: true,
-        title: "Lighting <br /> Creative Furniture",
+        title: "Carretilha <br /> LUMIS SOLE",
         subtile:
-          "From luxury watches and chronographs to wall clocks and weather stations, Henning Koppels.",
+          "A carretilha Sole é uma carretilha de perfil baixo, com chassi e laterais em grafite, carretel em alumínio aliviado e manivela com infinito anti-reverso."
       },
       {
         id: 2,

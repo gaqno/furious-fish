@@ -31,7 +31,7 @@
                                     <i class="ion-ios-search-strong"></i> Search
                                   </a>
                                 </li>
-                                <li><a href="#" class="cart"><i class="ion-bag"></i> Cart 
+                                <li><a href="#" class="cart"><i class="ion-bag"></i> Carrinho 
                                   <span>({{state.totalPriceQuantity.quantity}})</span>
                                 </a>
                               <!-- cart mini start -->

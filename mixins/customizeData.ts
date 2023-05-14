@@ -42,7 +42,7 @@ export default {
               link: '/shop',
               title: 'Products Pages',
               dropdownMenu: [
-                { link: '/product-details', title: 'Product Details' },
+                { link: '/product-details', title: 'Detalhes do produto' },
                 { link: '/product-details', title: 'Product Page V2' },
                 { link: '/product-details', title: 'Product Page V3' },
                 { link: '/product-details', title: 'Product Page V4' },
@@ -55,9 +55,9 @@ export default {
               link: '/shop',
               title: 'Other Shop Pages',
               dropdownMenu: [
-                { link: '/wishlist', title: 'Wishlist' },
+                { link: '/wishlist', title: 'Lista de desejos' },
                 { link: '/compare', title: 'Compare' },
-                { link: '/cart', title: 'Shopping Cart' },
+                { link: '/cart', title: 'Carrinho de compras' },
                 { link: '/checkout', title: 'Checkout' },
                 { link: '/register', title: 'Register' },
                 { link: '/login', title: 'Login' },
@@ -86,8 +86,8 @@ export default {
           hasDropdown: true,
           megamenu: false,
           dropdownItems: [
-            { link: '/wishlist', title: 'Wishlist' },
-            { link: '/cart', title: 'Shopping Cart' },
+            { link: '/wishlist', title: 'Lista de desejos' },
+            { link: '/cart', title: 'Carrinho de compras' },
             { link: '/checkout', title: 'Checkout' },
             { link: '/account', title: 'Account' },
             { link: '/register', title: 'Register' },
@@ -97,7 +97,7 @@ export default {
         },
         {
           link: '/contact',
-          title: 'Contact',
+          title: 'Contato',
         },
       ] as menuType[]
     }

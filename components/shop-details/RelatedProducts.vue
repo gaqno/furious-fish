@@ -5,12 +5,11 @@
         <div class="col-xl-12">
           <div class="section__title-wrapper text-center mb-55">
             <div class="section__title mb-10">
-              <h2>Related Products</h2>
+              <h2>Produtos relacionados</h2>
             </div>
             <div class="section__sub-title">
               <p>
-                Mirum est notare quam littera gothica quam nunc putamus parum
-                claram!
+                Seleção de produtos relacionados com o produto atual
               </p>
             </div>
           </div>

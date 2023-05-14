@@ -27,9 +27,9 @@
           </ul>
         </div>
       <div class="price">
-        <span>${{prd.price.toFixed(2)}}</span>
+        <span>R${{prd.price.toFixed(2)}}</span>
         <span v-if="prd.sale_of_per" class="price-old">
-          ${{(prd.price - prd.price * prd.sale_of_per / 100).toFixed(2)}}
+          R${{(prd.price - prd.price * prd.sale_of_per / 100).toFixed(2)}}
         </span>
         <div class="add-cart p-absolute transition-3">
           <a @click.prevent="state.add_cart_product(prd)" href="#">+ Add to Cart</a>

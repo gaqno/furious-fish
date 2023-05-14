@@ -14,7 +14,7 @@
                 <h2 v-html="item.title"></h2>
                 <p v-html="item.subtile"></p>
                 <nuxt-link href="/shop" class="os-btn os-btn-2 hero-slider-btn">
-                  Discover now
+                  Ver +
                 </nuxt-link> 
               </div>
             </div>
