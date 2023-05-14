@@ -4,7 +4,7 @@
         <div class="row">
           <div class="col-xxl-4 col-md-4">
               <div class="profile__menu-left bg-white mb-50">
-                <h3 class="profile__menu-title"><i class="fa fa-list-alt"></i> Your Menu</h3>
+                <h3 class="profile__menu-title"><i class="fa fa-list-alt"></i> Menu</h3>
                 <div class="profile__menu-tab">
                     <div class="nav nav-tabs flex-column justify-content-start text-start" id="nav-tab" role="tablist">
                       <button class="nav-link active" id="nav-account-tab" data-bs-toggle="tab" data-bs-target="#nav-account" type="button" role="tab" aria-controls="nav-account" aria-selected="true"> <i class="fa fa-user"></i> Minha conta</button>

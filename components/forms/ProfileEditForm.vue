@@ -2,22 +2,22 @@
   <Form :validation-schema="schema" @submit="onSubmit">
       <div class="profile__edit-input">
         <p>Name</p>
-        <Field name="name" type="text" placeholder="Your Name" />
+        <Field name="name" type="text" placeholder="Seu nome" />
         <ErrorMessage name="name" class="text-danger" />
       </div>
       <div class="profile__edit-input">
         <p>Email</p>
-        <Field name="email" type="email" placeholder="Your Email" />
+        <Field name="email" type="email" placeholder="Seu email" />
         <ErrorMessage name="email" class="text-danger" />
       </div>
       <div class="profile__edit-input">
         <p>Phone</p>
-        <Field name="phone" type="text" placeholder="Your Phone" />
+        <Field name="phone" type="text" placeholder="Seu telefone" />
         <ErrorMessage name="phone" class="text-danger" />
       </div>
       <div class="profile__edit-input">
         <p>Address</p>
-        <Field name="address" type="text" placeholder="Your Address" />
+        <Field name="address" type="text" placeholder="Seu endereço" />
         <ErrorMessage name="address" class="text-danger" />
       </div>
       <div class="profile__edit-input">

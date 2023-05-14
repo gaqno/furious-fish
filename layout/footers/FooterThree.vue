@@ -110,7 +110,7 @@
                           <div class="footer__widget-content">
                               <p>oin over 1,000 people who get free and fresh content delivered automatically each time we publish.</p>
                               <div class="form-group">
-                                  <input class="form-control" id="newsletter-input" type="email" name="contact[email]" placeholder="Your email address...">
+                                  <input class="form-control" id="newsletter-input" type="email" name="contact[email]" placeholder="Seu endereço de email...">
                                   <button class="ss-btn btnNewsletter" type="submit">Subscribe</button>
                               </div>
                           </div>

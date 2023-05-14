@@ -1,7 +1,7 @@
 <template>
     <div class="mini-cart">
         <div v-if="store.cart_products.length === 0">
-            <h5>Your cart is empty</h5>
+            <h5>Sem produtos no carrinho!</h5>
         </div>
         <div v-if="store.cart_products.length > 0" class="mini-cart-inner">
             <ul :class="`mini-cart-list ${store.cart_products.length === 1 ? 'slider-height_1' :
@@ -20,7 +20,7 @@
                         </h5>
                         <div class="cart-price">
                             <span class="ammount">{{ item.orderQuantity }}<i class="fal fa-times"></i></span>
-                            <span class="price">$ {{ item.price }}</span>
+                            <span class="price">R$ {{ item.price }}</span>
                         </div>
                     </div>
                     <div class="del-icon f-right mt-30" @click="store.remover_cart_products(item)">

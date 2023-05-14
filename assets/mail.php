@@ -10,7 +10,7 @@
 
         $name = strip_tags(trim($_POST["name"]));
 
-				$name = str_replace(array("\r","\n"),array(" "," "),$name);
+        $name = str_replace(array("\r","\n"),array(" "," "),$name);
 
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
 
@@ -28,7 +28,7 @@
 
             http_response_code(400);
 
-            echo "Please complete the form and try again.";
+            echo "Por favor, complete o formulário e tente novamente.";
 
             exit;
 
@@ -40,19 +40,19 @@
 
         // FIXME: Update this to your desired email address.
 
-        $recipient = "";
+        $recipient = "rogerio@pescafuriosa.com";
 
 
 
         // Set the email of sender.
 
-        $sender = "New contact from $name";
+        $sender = "Novo contato de $name";
 
 
 
         //Email Header
 
-        $head = " ====== BASIC THEME ====== ";
+        $head = " PESCA FURIOSA ";
 
 
 
@@ -84,7 +84,7 @@
 
             http_response_code(200);
 
-            echo "Thank You! Your message has been sent.";
+            echo "Obrigado! Sua mensagem foi enviada.";
 
         } else {
 

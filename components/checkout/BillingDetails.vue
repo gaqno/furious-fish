@@ -23,7 +23,7 @@
     <div class="col-md-6">
       <div class="checkout-form-list">
         <label>Endereço de email <span class="required">*</span></label>
-        <input type="email" placeholder="Your Email" />
+        <input type="email" placeholder="Seu email" />
       </div>
     </div>
     <div class="col-md-6">
