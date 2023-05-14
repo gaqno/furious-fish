@@ -14,7 +14,7 @@
               <li><span><i class="fal fa-star"></i></span></li>
           </ul>
           <span class="rating-no ml-10">
-              {{item.rating}} rating(s)
+              {{item.rating}} avaliações
           </span>
       </div>
       <div class="product__price-2 mb-25">
@@ -27,25 +27,25 @@
       <div class="product__modal-form">
           <form action="#">
               <div class="product__modal-input size mb-20">
-                  <label>Size <i class="fas fa-star-of-life"></i></label>
+                  <label>Tamanho <i class="fas fa-star-of-life"></i></label>
                   <select>
                       <option>- Please select -</option>
                       <option v-for="(size,i) in item.sizes" :key="i">{{size}}</option>
                   </select>
               </div>
               <div class="product__modal-input color mb-20">
-                  <label>Color <i class="fas fa-star-of-life"></i></label>
+                  <label>Cor <i class="fas fa-star-of-life"></i></label>
                   <select>
                       <option>- Please select -</option>
                       <option v-for="(clr,i) in item.colors" :key="i">{{clr}}</option>
                   </select>
               </div>
               <div class="product__modal-required mb-5">
-                  <span >Repuired Fiields *</span>
+                  <span >Campos obrigatórios *</span>
               </div>
               <div class="pro-quan-area d-lg-flex align-items-center">
                   <div class="product-quantity-title">
-                      <label>Quantity</label>
+                      <label>Quantidade</label>
                   </div>
                   <div class="product-quantity">
                     <div class="cart-plus-minus">

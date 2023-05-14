@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="page__title-inner text-center">
-                    <h1>{{title}}</h1>
+                    <h1 class="">{{title}}</h1>
                     <div class="page__title-breadcrumb">                                 
                         <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import bg from '~/assets/img/page-title/page-title-1.png';
+import bg from '~/assets/img/page-title/page-title-1.jpg';
 
 export default defineComponent({
   props:{
