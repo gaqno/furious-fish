@@ -92,7 +92,7 @@ export default defineComponent({
   setup() {
     const mobile_menus = ref<MenuDataType[]>([
       {
-        title: "Home",
+        title: "Início",
         dropdown: true,
         dropdownMenu: [
           { link: "/", title: "Home Style 1" },
@@ -116,7 +116,7 @@ export default defineComponent({
         ],
       },
       {
-        title: "Other Pages",
+        title: "Atalhos",
         dropdown: true,
         dropdownMenu: [
           { link: "/wishlist", title: "Lista de desejos" },
@@ -142,7 +142,7 @@ export default defineComponent({
         ],
       },
       {
-        title: "Contact",
+        title: "Contato",
         dropdown: false,
         link: "/contact",
       },

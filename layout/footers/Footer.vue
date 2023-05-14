@@ -11,8 +11,7 @@
                                 </nuxt-link>
                             </div>
                             <div class="footer__widget-content">
-                                <p>Outstock is a premium Templates theme with advanced admin module. It’s extremely
-                                    customizable, easy to use and fully responsive and retina ready.</p>
+                                <p>A Pesca Furiosa é uma loja online especializada em artigos de pesca e afins, com uma ampla variedade de produtos para atender a todos os tipos de pescadores. Nossa loja é conhecida por oferecer uma experiência de compra fácil e acessível, com uma plataforma responsiva e totalmente personalizável. Todos os nossos produtos são selecionados cuidadosamente para garantir a qualidade e a satisfação de nossos clientes. Junte-se à Pesca Furiosa e descubra o mundo da pesca com excelência e estilo.</p>
                                 <div class="footer__contact">
                                     <ul>
                                         <li>
