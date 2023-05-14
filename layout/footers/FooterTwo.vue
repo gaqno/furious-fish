@@ -56,7 +56,7 @@ export default defineComponent({
     const widget_data = [
           {
             id: 1,
-            title: 'My Account',
+            title: 'Minha conta',
             links: [
               {link:"#", list: 'Minha conta' },
               {link:"#", list: 'Checkout' },
@@ -67,35 +67,30 @@ export default defineComponent({
           },
           {
             id: 2,
-            title: 'Quick Links',
+            title: 'Links rápidos',
             links: [
-              {link:"#", list: 'Store Location' },
-              {link:"#", list: 'My Account' },
-              {link:"#", list: 'Orders Tracking' },
-              {link:"#", list: 'Size Guide' },
+              {link:"#", list: 'Onde estamos?' },
+              {link:"#", list: 'Minha conta' },
+              {link:"#", list: 'Rastreio do pedido' },
+              {link:"#", list: 'Guia de tamanhos' },
               {link:"#", list: 'FAQs' },
             ]
           },
           {
             id: 3,
-            title: 'information',
+            title: 'Informações',
             links: [
-              {link:"#", list: 'About Us' },
-              {link:"#", list: 'Careers' },
-              {link:"#", list: 'Delivery Information' },
-              {link:"#", list: 'Privacy Policy' },
-              {link:"#", list: 'Terms & Condition' },
+              {link:"#", list: 'Sobre nós' },
+              {link:"#", list: 'Informações de entrega' },
             ]
           },
           {
             id: 4,
-            title: 'Customer Service',
+            title: 'Serviço ao cliente',
             links: [
-              {link:"#", list: 'Shipping Policy' },
+              {link:"#", list: 'Sobre entrega' },
               {link:"#", list: 'Ajuda & Contato' },
-              {link:"#", list: 'Returns & Refunds' },
-              {link:"#", list: 'Online Stores' },
-              {link:"#", list: 'Terms & Conditions' },
+              {link:"#", list: 'Retorno & Ressarciamento' },
             ]
           },
         ]

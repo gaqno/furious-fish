@@ -89,7 +89,7 @@ export default {
             { link: '/wishlist', title: 'Lista de desejos' },
             { link: '/cart', title: 'Carrinho de compras' },
             { link: '/checkout', title: 'Checkout' },
-            { link: '/account', title: 'Account' },
+            { link: '/account', title: 'Conta' },
             { link: '/register', title: 'Register' },
             { link: '/login', title: 'Login' },
             { link: '/404', title: 'Error 404' },

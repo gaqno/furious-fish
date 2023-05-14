@@ -1,6 +1,6 @@
 <template>
   <layout :transparent="true">
-    <breadcrumb-area title="Account" subtitle="Account"/>
+    <breadcrumb-area title="Conta" subtitle="Conta"/>
     <profile-area/>
     <profile-menu-area/>
   </layout>
@@ -22,7 +22,7 @@ export default defineComponent({
   },
   setup() {
     useHead({
-      title: "Account",
+      title: "Conta",
     });
   },
 });

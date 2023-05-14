@@ -125,7 +125,7 @@ export default defineComponent({
           { link: "/checkout", title: "Checkout" },
           { link: "/register", title: "Register" },
           { link: "/login", title: "Login" },
-          { link: "/account", title: "Account" },
+          { link: "/account", title: "Minha conta" },
         ],
       },
       {
