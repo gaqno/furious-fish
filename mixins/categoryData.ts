@@ -20,7 +20,7 @@ export default {
           id: 2,
           img: cate_img_2,
           parentTitle: "Roupas & Acessórios",
-          children:['Clothing','Oil']
+          children:['Roupas','Acessórios']
         },
         {
           id: 3,
@@ -31,22 +31,15 @@ export default {
         {
           id: 4,
           img: cate_img_4, 
-          parentTitle: "FASHION FOR MEN’S",
-          children:['Shirt'],
+          parentTitle: "Roupas Masculinas",
+          children:['Todos', 'Camisetas', 'Calças', 'Bermudas', 'Acessórios'],
           smDesc:"Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum."
         },
         {
           id: 5,
           img: cate_img_5, 
-          parentTitle: "FASHION FOR WOMEN’S",
-          children:['Shoes'],
-          smDesc:"Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum."
-        },
-        {
-          id: 6,
-          img: cate_img_6, 
-          parentTitle: "FASHION FOR MEN’S",
-          children:['Shirt'],
+          parentTitle: "Roupas Femininas",
+          children:['Todos', 'Camisetas', 'Calças', 'Bermudas', 'Acessórios'],
           smDesc:"Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum."
         },
       ] as CategoryType []
