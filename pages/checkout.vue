@@ -16,27 +16,13 @@
   </layout>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import Layout from "~~/layout/Layout.vue";
 import BreadcrumbArea from "~~/components/common/breadcrumb/BreadcrumbArea.vue";
 import CouponArea from "~~/components/checkout/CouponArea.vue";
 import CheckoutArea from "~~/components/checkout/CheckoutArea.vue";
 import { useCartStore } from "~~/store/useCart";
 
-export default defineComponent({
-  components: {
-    Layout,
-    BreadcrumbArea,
-    CouponArea,
-    CheckoutArea,
-  },
-  setup() {
-    const state = useCartStore();
-    useHead({
-      title: "Checkout",
-    });
-    return { state };
-  },
-});
+const state = useCartStore();
+useHead({ title: "Checkout" });
 </script>
