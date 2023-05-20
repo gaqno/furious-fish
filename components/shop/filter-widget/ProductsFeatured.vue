@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar__widget">
         <div class="sidebar__widget-title mb-30">
-            <h3>Featured Products</h3>
+            <h3>Produtos similares</h3>
         </div>
         <div class="sidebar__widget-content">
             <div class="features__product">

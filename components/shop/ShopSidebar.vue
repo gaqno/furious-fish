@@ -9,15 +9,15 @@
     <!-- pFilter By Price end -->
 
     <!-- product size start -->
-    <product-sizes />
+    <!-- <product-sizes /> -->
     <!-- product size end -->
 
     <!-- product color start -->
-    <product-color />
+    <!-- <product-color /> -->
     <!-- product color end -->
 
     <!-- product brand start -->
-    <product-brands />
+    <!-- <product-brands /> -->
     <!-- product brand end -->
 
     <!-- reset button start -->

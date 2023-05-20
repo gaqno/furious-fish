@@ -35,3 +35,7 @@ export async function getAllProducts(userId: number) {
 export async function getProductDetails(id: string) {
   return callApi(`/items/${id}`, 'GET')
 }
+
+export async function getPreference() {
+  return callApi('/checkout/preferences', 'GET')
+}

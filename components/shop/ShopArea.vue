@@ -10,7 +10,7 @@
                         <div class="shop__header d-sm-flex justify-content-between align-items-center mb-40">
                             <div class="shop__header-left">
                                 <div class="show-text">
-                                    <span>Mostando 1–{{ store.filterProducts.slice(pageStart, pageStart +
+                                    <span>Mostrando 1 – {{ store.filterProducts.slice(pageStart, pageStart +
                                         countOfPage).length }} de {{ store.products.length }} resultados</span>
                                 </div>
                             </div>

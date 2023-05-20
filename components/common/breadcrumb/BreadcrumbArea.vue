@@ -1,5 +1,5 @@
 <template>
-  <section class="page__title p-relative d-flex align-items-center" :style="{ backgroundImage: `url(${bg})`}">
+  <section class="page__title p-relative d-flex align-items-center">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import bg from '~/assets/img/page-title/page-title-1.jpg';
+import bg from '~/assets/img/slider/brand_banner_1.png';
 
 export default defineComponent({
   props:{

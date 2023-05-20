@@ -41,8 +41,8 @@ import { defineComponent, ref } from "vue";
 import { Carousel, Slide, Pagination } from "vue3-carousel";
 // external
 import { HeroSliderTypeTwo } from "~/types/HeroSliderDataType";
-import slider_img_1 from "~/assets/img/slider/03/slider-01.jpg";
-import slider_img_2 from "~/assets/img/slider/03/slider-02.jpg";
+import slider_img_1 from "~/assets/img/slider/brand_banner_1.png";
+import slider_img_2 from "~/assets/img/slider/03/slider-04.png";
 import slider_img_3 from "~/assets/img/slider/03/slider-03.png";
 
 export default defineComponent({
@@ -53,23 +53,23 @@ export default defineComponent({
         id: 1,
         bgImg: slider_img_1,
         isDark: true,
-        title: "Carretilha <br /> LUMIS SOLE",
+        title: "PESCA FURIOSA",
         subtile:
-          "A carretilha Sole é uma carretilha de perfil baixo, com chassi e laterais em grafite, carretel em alumínio aliviado e manivela com infinito anti-reverso."
+          "A exelência em pesca esportiva, com os melhores produtos do mercado!"
       },
       {
         id: 2,
         bgImg: slider_img_2,
-        title: "Clock <br /> Creative Furniture",
+        title: "Lumis TUNIZZA PRO <br /> Creative Furniture",
         subtile:
-          "The Drop™ chair was designed by Arne Jacobsen in 1958 as part of his masterpiece, the legendary Radisson Blu Royal Hotel in Copenhagen.",
+          "Disponíveis nos tamanhos 1.90M / 2M <br/> Fibra de carbono.",
       },
       {
         id: 3,
         bgImg: slider_img_3,
-        title: "Drop Chair <br /> The Black Leather Edition",
+        title: "Lumis POWER CARBON",
         subtile:
-          "From luxury watches and chronographs to wall clocks and weather stations, Henning Koppels.",
+          "Disponíveis nos tamanhos 1.90M / 2M <br/> Fibra de carbono.",
       },
     ]);
     return { slider_data };
