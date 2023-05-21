@@ -29,18 +29,16 @@
                           <div class="profile__info-wrapper white-bg">
                             <div class="profile__info-item">
                                 <p>Nome</p>
-                                <h4>Gabriel Aquino</h4>
+                                <h4>{{ app.getUserIdentifier.full_name }}</h4>
                             </div>
                             <div class="profile__info-item">
-                                <p>Email</p>
-                                <h4>
-                                  <a href="rogerio@pescafuriosa.com" class="__cf_email__" data-cfemail="94fdfaf2fbd4f1f0e1fff1e6baf7fbf9">outstock@hotmail.com</a>
-                                </h4>
+                              <p>Email</p>
+                              <h4>{{ app.getUserIdentifier.email }}</h4>
                             </div>
                             <div class="profile__info-item">
                                 <p>Phone</p>
-                                <h4>+55 11 98901-7530</h4>
-                            </div>
+                                <h4>{{ app.getUserIdentifier.email }}</h4>
+                              </div>
                             <div class="profile__info-item">
                                 <p>Endereço</p>
                                 <h4>Rua Antonio de Couros, 182 - Sala 1, SP - BR.</h4>
@@ -112,12 +110,10 @@
   <!-- edit modal end -->
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+import { useAppStore } from '~/store/app';
 import ProfileEditModal from '../common/modals/ProfileEditModal.vue';
 import ChangePasswordForm from '../forms/ChangePasswordForm.vue';
 
-export default defineComponent({
-  components: { ChangePasswordForm, ProfileEditModal },
-})
+const app = useAppStore()
 </script>

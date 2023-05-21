@@ -23,7 +23,8 @@
                                     </nav>
                                 </div>
                                 <div @click.prevent="handleOffcanvas" class="mobile-menu-btn d-lg-none">
-                                    <a href="#" class="mobile-menu-toggle"><i class="fas fa-bars"></i></a>
+                                    <a href="#" class="mobile-menu-toggle"><i class="fas fa-bars d-none d-md-none d-sm-block"></i></a>
+                                    <a href="#" class="mobile-menu-toggle"><i class="fas fa-anchor d-lg-none"></i></a>
                                 </div>
                                 <div v-if="!header_big" class="header__action">
                                     <ul>

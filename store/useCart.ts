@@ -18,7 +18,7 @@ export const useCartStore = defineStore('cart', {
           orderQuantity: 1,
         };
         this.cart_products.push(newItem);
-        useNuxtApp().$toast.success(`${payload.title} added to cart`);
+        useNuxtApp().$toast.success(`${payload.title} adicionar ao carrinho!`);
       } else {
         this.cart_products.map((item) => {
           if (item.id === payload.id) {
@@ -28,7 +28,7 @@ export const useCartStore = defineStore('cart', {
                   this.orderQuantity !== 1
                     ? this.orderQuantity + item.orderQuantity
                     : item.orderQuantity + 1;
-                useNuxtApp().$toast.success(`${this.orderQuantity} ${item.title} added to cart`);
+                useNuxtApp().$toast.success(`${this.orderQuantity} ${item.title} adicionar ao carrinho!`);
               } else {
                 useNuxtApp().$toast.error(`No more quantity available for this product!`);
                 this.orderQuantity = 1;

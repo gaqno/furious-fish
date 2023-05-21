@@ -15,12 +15,11 @@
               </div>
               <div class="header__search-categories">
                 <ul class="search-category">
-                  <li><nuxt-link href="/shop">Todas as categorias</nuxt-link></li>
-                  <li><nuxt-link href="/shop">Acessórios</nuxt-link></li>
-                  <li><nuxt-link href="/shop">Varás de Pesca</nuxt-link></li>
-                  <li><nuxt-link href="/shop">Carretilhas</nuxt-link></li>
-                  <li><nuxt-link href="/shop">Roupas</nuxt-link></li>
-                  <li><nuxt-link href="/shop">Acessórios</nuxt-link></li>
+                  <li><nuxt-link href="/shop/all">Todas as categorias</nuxt-link></li>
+                  <li><nuxt-link href="/shop/acessorios">Acessórios</nuxt-link></li>
+                  <li><nuxt-link href="/shop/varas">Varás de Pesca</nuxt-link></li>
+                  <li><nuxt-link href="/shop/carretilhas">Carretilhas</nuxt-link></li>
+                  <li><nuxt-link href="/shop/roupas">Roupas</nuxt-link></li>
                 </ul>
               </div>
               <div class="header__search-input p-relative">

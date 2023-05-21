@@ -24,7 +24,7 @@
           <div class="checkout-form-list">
             <input
               type="text"
-              placeholder="Apartamento, bloco. (opicional)"
+              placeholder="Apartamento, bloco. (opcional)"
             />
           </div>
         </div>

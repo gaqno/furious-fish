@@ -3,9 +3,9 @@
     <breadcrumb-area title="Checkout" subtitle="Checkout" />
     <client-only>
       <div v-if="state.cart_products.length === 0" class="text-center pt-100 pb-100">
-        <h3>No items found in cart to checkout</h3>
+        <h3>Sem items no carrinho</h3>
         <nuxt-link class="os-btn os-btn-black mt-15" to="/shop">
-          Shop Now
+          Compre agora!
         </nuxt-link>
       </div>
       <div v-if="state.cart_products.length > 0">

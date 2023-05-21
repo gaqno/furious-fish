@@ -56,51 +56,6 @@
                 </tfoot>
             </table>
         </div>
-
-        <div class="payment-method">
-            <div class="accordion" id="accordionExample">
-                <div class="card">
-                    <div class="card-header" id="headingOne">
-                        <h5 class="mb-0">
-                            <button class="btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
-                                Direct Bank Transfer
-                            </button>
-                        </h5>
-                    </div>
-
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                        data-bs-parent="#accordionExample">
-                        <div class="card-body">
-                            Make your payment directly into our bank account. Please use your Order ID
-                            as the payment
-                            reference. Your order won’t be
-                            shipped until the funds have cleared in our account.
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h5 class="mb-0">
-                            <button class="btn-link collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Cheque Payment
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="card-body">
-                            Please send your cheque to Store Name, Store Street, Store Town, Store
-                            State / County, Store
-                            Postcode.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="order-button-payment mt-20">
-                <button type="submit" class="os-btn os-btn-black">Confirmar compra</button>
-            </div>
-        </div>
     </div>
 </template>
 

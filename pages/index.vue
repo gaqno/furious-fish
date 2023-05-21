@@ -5,6 +5,8 @@
       <CategoryArea :style_2="true" />
       <TrendingProductTwo />
       <ShopBanner :style_2="true" />
+      <CommonModalsCookiesModal v-if="!app.cookiesConcent" />
+
       <!-- <SaleOffAreaTwo /> -->
       <!-- <BlogArea/> -->
     <!-- <ClientBrandSlider :style_2="true" /> -->
@@ -24,7 +26,9 @@ import ClientBrandSlider from "~~/components/client-brands/ClientBrandSlider.vue
 import SubscribeArea from "~~/components/subscribe/SubscribeArea.vue";
 import { getAllProducts, getProductDetails } from "~/services/mercado-livre-api";
 import { useProductsStore } from "~/store/useProducts";
+import { useAppStore } from "~/store/app";
 
+const app = useAppStore()
 const products = useProductsStore()
 
 const productsList = ref([])

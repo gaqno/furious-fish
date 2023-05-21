@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 import productData from "~~/data/productData";
 import ProductType from "~~/types/productType";
 
-export const useProductsStore = defineStore("products", {
+export const useProductsStore = defineStore("ML_PRODUCTS", {
   state: () => ({
     products: [{
       id: 1,

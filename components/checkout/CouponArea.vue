@@ -1,5 +1,5 @@
 <template>
-  <section class="coupon-area pt-100 pb-30">
+  <section class="coupon-area">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -12,7 +12,7 @@
             <div v-if="checkoutLogin" id="checkout-login" class="coupon-content">
               <div class="coupon-info">
                 <p class="coupon-text">
-                  Tem cupom? Informe abaixo para verificar a disponibilidade!
+                  Informe seu email e senha cadastrados
                 </p>
                 <form @submit.prevent="handleSubmit">
                   <p class="form-row-first">
@@ -24,7 +24,7 @@
                     <input type="text" v-model="formValue.password" />
                   </p>
                   <p class="form-row">
-                    <button class="os-btn os-btn-black" type="submit">Login</button>
+                    <button @click="handleCheckoutLogin" class="os-btn os-btn-black" type="submit">Login</button>
                     <label>
                       <input type="checkbox" v-model="formValue.isChecked" />
                       Lembrar-se de mim
@@ -65,43 +65,50 @@
 </template>
 
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+import { ref } from 'vue';
+import { useAppStore } from '~/store/app';
 
-interface formValueType {
-  name_or_email:string,
-  password:string,
-  isChecked:boolean
+interface FormValueType {
+  name_or_email: string;
+  password: string;
+  isChecked: boolean;
 }
+const app = useAppStore()
+const { signUp } = supabase()
+const checkoutLogin = ref(false);
+const checkoutCoupon = ref(false);
+const formValue = ref<FormValueType>({
+  name_or_email: "",
+  password: "",
+  isChecked: false,
+});
+const couponVal = ref('');
 
-export default defineComponent({
-  data () {
-    return {
-      checkoutLogin:false,
-      checkoutCoupon:false,
-      formValue: {
-        name_or_email: "",
-        password: "",
-        isChecked: false,
-      } as formValueType,
-      couponVal:''
+const handleCheckoutLogin = () => {
+  signUp({
+    email: formValue.value.name_or_email,
+    password: formValue.value.password
+  }).then(({ error }) => {
+    if (error) {
+      alert(error.message)
+    } else {
+      app.$patch({ logged: true })
     }
-  },
-  methods:{
-    handleCheckoutLogin () {
-      this.checkoutLogin = !this.checkoutLogin
-    },
-    handleCheckoutCoupon () {
-      this.checkoutCoupon = !this.checkoutCoupon
-    },
-    handleSubmit() {
-      this.formValue = {} as formValueType;
-    },
-    handleCouponSubmit() {
-      console.log(this.couponVal);
-      this.couponVal = '';
-    },
-  }
-})
-</script>
+  })
+  checkoutLogin.value = !checkoutLogin.value;
+};
 
+const handleCheckoutCoupon = () => {
+  checkoutCoupon.value = !checkoutCoupon.value;
+};
+
+const handleSubmit = () => {
+  formValue.value = {} as FormValueType;
+};
+
+const handleCouponSubmit = () => {
+  console.log(couponVal.value);
+  couponVal.value = '';
+};
+</script>

@@ -1,3 +1,4 @@
+import { useAppStore } from "~/store/app";
 import menuType from "~/types/menuType";
 
 export default {
@@ -40,7 +41,10 @@ export default {
             { link: '/wishlist', title: 'Lista de desejos' },
             { link: '/cart', title: 'Carrinho de compras' },
             { link: '/checkout', title: 'Checkout' },
-            { link: '/account', title: 'Minha conta' },
+            {
+              link: useAppStore().logged === true ? '/account' : '/login',
+              title: useAppStore().logged === true ? 'Minha conta' : 'Login'
+            },
           ]
         },
         {

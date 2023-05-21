@@ -6,7 +6,7 @@
                     <h5>Minha conta</h5>
                 </div>
                 <ul>
-                    <li><nuxt-link href="/account">Minha conta</nuxt-link></li>
+                    <li><nuxt-link :href="app.logged ? '/account' : '/register'">{{ app.logged ? 'Perfil' : 'Login'}}</nuxt-link></li>
                     <li><nuxt-link href="/wishlist">Lista de desejos</nuxt-link></li>
                     <li><nuxt-link href="/cart">Carrinho</nuxt-link></li>
                     <li><nuxt-link href="/checkout">Checkout</nuxt-link></li>
@@ -17,12 +17,9 @@
     </ul>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { defineComponent } from 'vue';
+import { useAppStore } from '~/store/app';
 
-export default defineComponent({
-    setup() {
-        return {}
-    }
-})
+const app = useAppStore()
 </script>

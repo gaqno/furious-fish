@@ -19,7 +19,8 @@ export default defineNuxtConfig({
         ],
       },
     ],
-    'nuxt-icon'
+    'nuxt-icon',
+    '@nuxtjs/supabase',
   ],
   app: {
     head: {
@@ -41,6 +42,10 @@ export default defineNuxtConfig({
       PUBLIC_KEY: process.env.PUBLIC_KEY,
       ACCESS_TOKEN: process.env.ACCESS_TOKEN,
       SYS_PWD: process.env.SYS_PWD,
+      SUPABASE_URL: process.env.SUPABASE_URL,
+      SUPABASE_KEY: process.env.SUPABASE_KEY,
+      NUXT_PUBLIC_DATOCMS_TOKEN: process.env.NUXT_PUBLIC_DATOCMS_TOKEN,
+      NUXT_PUBLIC_DATOCMS_URL: process.env.NUXT_PUBLIC_DATOCMS_URL,
     }
   }
   // add envs
