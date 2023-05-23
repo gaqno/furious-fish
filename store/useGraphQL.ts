@@ -1,13 +1,14 @@
 import { defineStore } from "pinia";
-import ProductType from "~~/types/productType";
 
 export const useGraphQLStore = defineStore("GRAPHQL_PRODUCTS", {
   state: () => ({
-    products: [] as any
-  }),
+    products: [],
+    filterProducts: []
+  } as any),
   actions: {
-    setProducts(products: ProductType[]) {
+    setProducts(products: any[]) {
       this.products = products;
+      this.filterProducts = products;
     }
   },
   getters: {}

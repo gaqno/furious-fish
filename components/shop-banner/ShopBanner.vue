@@ -3,15 +3,11 @@
     <div :class="`container-fluid ${style_2?'':'p-0'}`">
       <div class="row g-0">
         <div
-          v-for="item in store.products.filter((p) => p.banner).slice(0, 2)"
+          v-for="item in ml_products.products.filter((p) => p.banner).slice(0, 2)"
           :key="item.id"
           class="col-xl-6 col-lg-6"
         >
-          <div
-            :class="`banner__item-2 banner-${
-              item.id === 1 ? 'right' : 'left'
-            } p-relative mb-30 p${item.id === 1 ? 'r' : 'l'}-15`"
-          >
+          <div :class="`banner__item-2 banner-${item.id === 1 ? 'right' : 'left'} p-relative mb-30 p${item.id === 1 ? 'r' : 'l'}-15`">
             <div class="banner__thumb fix">
               <nuxt-link :href="`/product-details/${item.id}`" class="w-img">
                 <img :src="item.banner_img" alt="banner" />
@@ -37,19 +33,24 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
+import { useGraphQLStore } from "~/store/useGraphQL";
 import { useProductsStore } from "~~/store/useProducts";
 
-export default defineComponent({
-  props: ["style_2", "style_3"],
-  setup() {
-    const store = useProductsStore();
-    return {
-      store,
-    };
+const ml_products = useProductsStore();
+const graphql_products = useGraphQLStore()
+const props = defineProps({
+  style_2: {
+    type: Boolean,
+    default: false,
   },
-});
+  style_3: {
+    type: Boolean,
+    default: false,
+  },
+})
+
+onMounted(() => console.log(graphql_products.products))
 </script>
 
 <style scoped>

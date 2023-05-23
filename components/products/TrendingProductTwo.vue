@@ -18,7 +18,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 col-md-3 col-sm-1" v-for="product in store.products" :key="product.id">
+        <div class="col-lg-4 col-md-3 col-sm-1" v-for="product in ml_products.products" :key="product.id">
           <product-item :item="product" />
         </div>
       </div>
@@ -30,10 +30,9 @@
 <script setup lang="ts">
 import { useProductsStore } from "~~/store/useProducts";
 import ProductItem from "./ProductItem.vue";
+import { useGraphQLStore } from "~/store/useGraphQL";
 
-const store = useProductsStore();
-const big_item = store.products.find(p => p.big_img);
-const trending_products = store.products.filter(p => p.trending).slice(0, 6)
-
+const ml_products = useProductsStore();
+const graphql_products = useGraphQLStore()
 </script>
 
