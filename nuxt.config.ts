@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   plugins: [
     { src: "./plugins/vue-masonry-wall.ts", mode: "client" },
     { src: "./plugins/vue3-toastify.ts", mode: "client" },
+    { src: '~/plugins/vercel.ts', mode: 'client' }
   ],
   modules: [
     [

@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.14.2",
+    "@vercel/analytics": "^1.0.1",
     "nuxt": "^3.2.3",
     "nuxt-icon": "^0.4.0"
   },
