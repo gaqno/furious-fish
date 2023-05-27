@@ -28,9 +28,10 @@ const fetchMercadoLivreProducts = () => {
         res.data.results.map((item: any) => {
           getProductDetails(item.id)
             .then((i: any) => {
+              console.log({ i })
               let obj = {
                 banner: false,
-                banner_img: i.data.thumbnail,
+                banner_img: i.data.picture.url,
                 brand: 'Nike',
                 category: i.data.category_id,
                 colors: ["Gray", "Yellow"],
@@ -48,7 +49,7 @@ const fetchMercadoLivreProducts = () => {
                 },
                 dimentsions: "62 x 56 x 12",
                 id: i.data.id,
-                img: i.data.thumbnail,
+                img: i.picture.url,
                 old_price: i.data.original_price,
                 parentCategory: "Varas de Pesca",
                 price: i.data.price,
@@ -57,7 +58,7 @@ const fetchMercadoLivreProducts = () => {
                 related_images: i.data.pictures.map((i: any) => i.url),
                 sizes: ["S", "M", "L", "XL"],
                 sm_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                thumb_img: i.data.thumbnail,
+                thumb_img: i.picture.url,
                 big_img: i.data.pictures[0].url,
                 title: i.data.title,
                 trending: true,

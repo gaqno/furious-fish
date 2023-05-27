@@ -11,7 +11,7 @@
                     <li><nuxt-link href="/cart">Carrinho</nuxt-link></li>
                     <li><nuxt-link href="/checkout">Checkout</nuxt-link></li>
                     <li v-if="!app.logged"><nuxt-link href="/register">Criar conta</nuxt-link></li>
-                    <li><nuxt-link>Logout</nuxt-link></li>
+                    <li v-if="app.logged"><nuxt-link>Logout</nuxt-link></li>
                 </ul>
             </div>
         </li>
@@ -19,7 +19,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineComponent } from 'vue';
 import { useAppStore } from '~/store/app';
 
 const app = useAppStore()

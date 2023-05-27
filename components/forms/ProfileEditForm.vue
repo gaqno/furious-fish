@@ -16,7 +16,7 @@
         <ErrorMessage name="phone" class="text-danger" />
       </div>
       <div class="profile__edit-input">
-        <p>Address</p>
+        <p>Endereço</p>
         <Field name="address" type="text" placeholder="Seu endereço" />
         <ErrorMessage name="address" class="text-danger" />
       </div>
