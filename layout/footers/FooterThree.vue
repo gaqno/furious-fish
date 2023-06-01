@@ -69,7 +69,7 @@
                   <div class="col-xl-2 col-lg-3 col-md-3 col-12">
                       <div class="footer__widget mb-30">
                           <div class="footer__widget-title">
-                              <h5>information</h5>
+                              <h5>Informações</h5>
                           </div>
                           <div class="footer__widget-content">
                               <div class="footer__links">

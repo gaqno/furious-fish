@@ -39,13 +39,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useProductsStore } from "~~/store/useProducts";
+import { useGraphQLStore } from "~~/store/useGraphQL";
 import ProductItem from "./ProductItem.vue";
 
 export default defineComponent({
   components: { ProductItem },
   setup() {
-    const store = useProductsStore();
+    const store = useGraphQLStore();
     const sell_products = store.products
       .filter((p) => typeof p.sale_of_per === "number" && p.sale_of_per > 0)
       .slice(0, 12);

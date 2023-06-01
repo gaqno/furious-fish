@@ -3,7 +3,7 @@
     <div :class="`container-fluid ${style_2?'':'p-0'}`">
       <div class="row g-0">
         <div
-          v-for="item in ml_products.products.filter((p) => p.banner).slice(0, 2)"
+          v-for="item in graphql_products.products.filter((p: any) => p.banner).slice(0, 2)"
           :key="item.id"
           class="col-xl-6 col-lg-6"
         >
@@ -35,9 +35,7 @@
 
 <script setup lang="ts">
 import { useGraphQLStore } from "~/store/useGraphQL";
-import { useProductsStore } from "~~/store/useProducts";
 
-const ml_products = useProductsStore();
 const graphql_products = useGraphQLStore()
 const props = defineProps({
   style_2: {
@@ -50,7 +48,6 @@ const props = defineProps({
   },
 })
 
-onMounted(() => console.log(graphql_products.products))
 </script>
 
 <style scoped>

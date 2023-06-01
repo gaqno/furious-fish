@@ -62,7 +62,7 @@ import { Carousel, Slide } from "vue3-carousel";
 import { defineComponent } from "vue";
 // internal
 import ProductItemTwo from "./ProductItemTwo.vue";
-import { useProductsStore } from "~~/store/useProducts";
+import { useGraphQLStore } from "~/store/useGraphQL";
 // interface
 interface sliderRef {
   next(): void;
@@ -82,7 +82,7 @@ export default defineComponent({
     },
   },
   setup() {
-    const store = useProductsStore();
+    const store = useGraphQLStore();
     const products = store.products.filter((p) => p.bestSeller).filter(p => !p.big_img);
     return {
       products,

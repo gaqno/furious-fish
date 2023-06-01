@@ -29,7 +29,7 @@
     </div>
 
     <div class="mt-10"></div>
-    <button type="submit" class="os-btn w-100">CADASTRAR</button>
+    <button @click.prevent="signUp(schema.default)" type="submit" class="os-btn w-100">CADASTRAR</button>
     <div class="or-divide"><span>ou</span></div>
     <div class="d-flex gap-2">
       <div class="fb-login-btn">
@@ -47,7 +47,6 @@
     </div>
     <div class="mt-25"></div>
     <p class="mb-0">Já possuí uma conta? <nuxt-link href="/login">Entre agora!</nuxt-link></p>
-    <button></button>
     <nuxt-link href="/login" class="os-btn os-btn-black w-100">Entrar</nuxt-link>
   </Form>
 </template>
@@ -57,7 +56,7 @@ import { defineComponent } from "vue";
 import { Field, Form, ErrorMessage } from "vee-validate";
 import * as yup from "yup";
 
-const { signInWithFacebook, signInWithGoogle } = supabase()
+const { signInWithFacebook, signInWithGoogle, signUp } = supabase()
 const schema = yup.object({
   name: yup.string().required().label("Nome"),
   last_name: yup.string().required().label("Último nome"),

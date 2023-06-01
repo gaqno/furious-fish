@@ -37,12 +37,12 @@ import { Carousel, Slide } from "vue3-carousel";
 import { defineComponent } from "vue";
 // internal
 import ProductItem from "./ProductItem.vue";
-import { useProductsStore } from "~~/store/useProducts";
+import { useGraphQLStore } from "~~/store/useGraphQL";
 
 export default defineComponent({
   components: { ProductItem, Carousel, Slide },
   setup() {
-    const store = useProductsStore();
+    const store = useGraphQLStore();
     return {
       store,
     };

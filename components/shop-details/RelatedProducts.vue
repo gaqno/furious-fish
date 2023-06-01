@@ -17,7 +17,7 @@
       </div>
       <div class="row">
         <div
-          v-for="(prdItem, i) in state.getRelatedProducts(item.category,item.id)"
+          v-for="(prdItem, i) in graphql_products.getRelatedProducts(item.category, item.id)"
           :key="i"
           class="col-xl-3 col-lg-3 col-md-6 col-sm-6"
         >
@@ -28,24 +28,19 @@
   </section>
 </template>
 
-<script lang="ts">
-import { defineComponent, PropType } from "vue";
+<script setup lang="ts">
+import { PropType } from "vue";
 import ProductType from "~~/types/productType";
-import { useProductsStore } from "~~/store/useProducts";
+import { useGraphQLStore } from "~~/store/useGraphQL";
 import ProductItem from "../products/ProductItem.vue";
 
-export default defineComponent({
-  components: { ProductItem },
-  props: {
-    item: {
-      type: Object as PropType<ProductType>,
-      default: {},
-      required: true,
-    },
+const graphql_products = useGraphQLStore();
+const props = defineProps({
+  item: {
+    type: Object as PropType<ProductType>,
+    default: {},
+    required: true,
   },
-  setup(props) {
-    const state = useProductsStore();
-    return {state};
-  },
-});
+})
+
 </script>

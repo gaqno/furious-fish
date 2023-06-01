@@ -69,13 +69,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useProductsStore } from "~~/store/useProducts";
+import { useGraphQLStore } from "~~/store/useGraphQL";
 import ProductItem from "./ProductItem.vue";
 
 export default defineComponent({
   components: { ProductItem },
   setup() {
-    const store = useProductsStore();
+    const store = useGraphQLStore();
     const big_item_1 = store.products.filter(p => p.big_img)[0];
     const big_item_2 = store.products.filter(p => p.big_img)[1];
     const trending_products = store.products.filter(p => p.trending).slice(0,4)

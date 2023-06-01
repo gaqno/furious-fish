@@ -14,7 +14,7 @@
                 <div class="col-xl-3 col-lg-2 col-md-4 col-sm-4">
                     <div class="logo">
                         <nuxt-link href="/">
-                          <img src="~/assets/img/logo/logo-2.png" class="w-50" alt="logo">
+                          <img src="~/assets/img/logo/logo-2.png" class="w-25" alt="logo">
                         </nuxt-link>
                     </div>
                 </div>

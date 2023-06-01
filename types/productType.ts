@@ -4,7 +4,11 @@ interface ProductType {
   img:string,
   trending?:boolean,
   topRated?:boolean,
-  bestSeller?:boolean,
+  bestSeller?: boolean,
+  variants?: [{
+    key: string,
+    value: string[],
+  }],
   new?:boolean,
   banner?:boolean,
   banner_img?:string,
@@ -26,12 +30,13 @@ interface ProductType {
   colors:string[],
   weight?:number,
   dimension?:string,
-  reviews?:{
-    img:string,
-    name:string,
-    time:string,
-    rating:number,
-    children?:boolean,
+  reviews?: {
+    clientEmail: string,
+    reviewComment: string,
+    replyEmail: string,
+    replyComment: string,
+    score: number,
+    showReply: boolean,
   }[],
   details:{
     details_text:string,

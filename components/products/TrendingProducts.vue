@@ -39,7 +39,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useProductsStore } from "~~/store/useProducts";
+import { useGraphQLStore } from "~~/store/useGraphQL";
 import ProductItem from "./ProductItem.vue";
 
 export default defineComponent({
@@ -65,7 +65,7 @@ export default defineComponent({
     },
   },
   setup() {
-    const store = useProductsStore();
+    const store = useGraphQLStore();
     const trending_prd = store.products.filter((p) => p.trending)
     return {
       trending_prd,

@@ -71,12 +71,12 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import categoryData from "~~/mixins/categoryData";
-import { useProductsStore } from "~~/store/useProducts";
+import { useGraphQLStore } from "~~/store/useGraphQL";
 
 export default defineComponent({
   mixins: [categoryData],
   setup() {
-    const state = useProductsStore();
+    const state = useGraphQLStore();
     return { state };
   },
 });

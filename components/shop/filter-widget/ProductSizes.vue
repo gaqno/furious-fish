@@ -21,11 +21,11 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useProductsStore } from "~~/store/useProducts";
+import { useGraphQLStore } from "~~/store/useGraphQL";
 
 export default defineComponent({
   setup() {
-    const state = useProductsStore();
+    const state = useGraphQLStore();
     let allSizes = [] as any;
     state.products.forEach((product) => {
       let uniqueSizes = new Set(product.sizes);

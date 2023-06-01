@@ -24,12 +24,12 @@
 import { defineComponent } from 'vue';
 import Slider from '@vueform/slider';
 import '@vueform/slider/themes/default.css';
-import { useProductsStore } from '~~/store/useProducts';
+import { useGraphQLStore } from '~~/store/useGraphQL';
 
 export default defineComponent({
     components: { Slider },
     setup() {
-        const state = useProductsStore()
+        const state = useGraphQLStore()
         return { state }
     }
 })

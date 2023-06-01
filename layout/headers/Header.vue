@@ -2,14 +2,14 @@
     <client-only>
         <header>
             <div id="header-sticky" :class="`header__area ${transparent ? 'header__transparent' : ''} ${header_big ? 'box-25' : !white_bg ? 'grey-bg' : ''} 
-                ${isSticky ? 'sticky' : ''}`">
+                                                ${isSticky ? 'sticky' : ''}`">
                 <div :class="`${header_big ? 'container-fluid' : 'container'}`">
                     <div class="row align-items-center">
                         <div
                             :class="`${header_big ? 'col-xl-2 col-lg-2 col-md-4 col-sm-4 col-12' : 'col-xl-3 col-lg-3 col-md-4 col-sm-4'}`">
                             <div class="logo">
                                 <nuxt-link href="/">
-                                    <img src="~/assets/img/logo/logo-2.png" alt="logo" class="w-50">
+                                    <img src="~/assets/img/logo/logo-2.png" alt="logo" class="w-25">
                                 </nuxt-link>
                             </div>
                         </div>
@@ -22,10 +22,7 @@
                                         <menus />
                                     </nav>
                                 </div>
-                                <div @click.prevent="handleOffcanvas" class="mobile-menu-btn d-lg-none">
-                                    <a href="#" class="mobile-menu-toggle"><i class="fas fa-bars d-none d-md-none d-sm-block"></i></a>
-                                    <a href="#" class="mobile-menu-toggle"><i class="fas fa-anchor d-lg-none"></i></a>
-                                </div>
+
                                 <div v-if="!header_big" class="header__action">
                                     <ul>
                                         <li>
@@ -44,6 +41,13 @@
                                         <li> <a href="#"><i class="far fa-bars"></i></a>
                                             <extra-info />
                                         </li>
+                                        <li>
+                                            <div @click.prevent="handleOffcanvas" class="mobile-menu-btn">
+                                                <a href="#" class="mobile-menu-toggle">
+                                                    <i class="fas fa-anchor d-lg-none"></i>
+                                                </a>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -61,12 +65,18 @@
                                         <a href="#" class="cart"><i class="ion-bag"></i> Carrinho
                                             <span>({{ state.totalPriceQuantity.quantity }})</span>
                                         </a>
-                                        <!-- cart mini start -->
                                         <cart-mini />
-                                        <!-- cart mini end -->
                                     </li>
-                                    <li> <a href="#"><i class="far fa-bars"></i></a>
+                                    <li>
+                                        <a href="#"><i class="far fa-bars"></i></a>
                                         <extra-info />
+                                    </li>
+                                    <li>
+                                        <div @click.prevent="handleOffcanvas" class="mobile-menu-btn">
+                                            <a href="#" class="mobile-menu-toggle">
+                                                <i class="fas fa-anchor d-lg-none"></i>
+                                            </a>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>

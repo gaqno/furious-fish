@@ -42,7 +42,7 @@ export default {
               link: '/shop',
               title: 'Products Pages',
               dropdownMenu: [
-                { link: '/product-details', title: 'Detalhes do produto' },
+                { link: '/product-details', title: 'Produto' },
                 { link: '/product-details', title: 'Product Page V2' },
                 { link: '/product-details', title: 'Product Page V3' },
                 { link: '/product-details', title: 'Product Page V4' },

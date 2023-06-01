@@ -1,7 +1,7 @@
 <template>
   <layout :transparent="true">
-    <breadcrumb-area title="Detalhes do produto" subtitle="Detalhes do produto"/>
-    <shop-details-area :item="state.products[0]"/>
+    <breadcrumb-area :title="state.products[0].category[0]" subtitle="a" />
+    <shop-details-area :item="state.products[0]" />
   </layout>
 </template> 
 
@@ -9,7 +9,7 @@
 import { defineComponent } from "vue";
 import Layout from "~~/layout/Layout.vue";
 import BreadcrumbArea from "~~/components/common/breadcrumb/BreadcrumbArea.vue";
-import { useProductsStore } from "~~/store/useProducts";
+import { useGraphQLStore } from "~~/store/useGraphQL";
 import ShopDetailsArea from "~~/components/shop-details/ShopDetailsArea.vue";
 
 export default defineComponent({
@@ -19,11 +19,11 @@ export default defineComponent({
     ShopDetailsArea,
   },
   setup() {
-    const state = useProductsStore();
+    const state = useGraphQLStore();
     useHead({
-      title: "Detalhes do produto",
+      title: "PESCA FURIOSA - Varas",
     });
-    return {state}
+    return { state }
   },
 });
 </script>

@@ -23,11 +23,11 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useProductsStore } from "~~/store/useProducts";
+import { useGraphQLStore } from "~~/store/useGraphQL";
 
 export default defineComponent({
   setup() {
-    const state = useProductsStore();
+    const state = useGraphQLStore();
     const brands = [...new Set(state.products.map((p) => p.brand))];
     return { state, brands };
   },

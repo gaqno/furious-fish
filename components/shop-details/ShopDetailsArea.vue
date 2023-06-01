@@ -96,34 +96,23 @@
   <!-- related products end -->
 </template>
 
-<script lang="ts">
-import { defineComponent, PropType } from 'vue';
+<script setup lang="ts">
+import { PropType } from 'vue';
 import ProductType from '~~/types/productType';
 import ProductDetailsContent from './ProductDetailsContent.vue';
 import ProductDetailsReview from './ProductDetailsReview.vue';
 import RelatedProducts from './RelatedProducts.vue';
 
-export default defineComponent({
-  components: { ProductDetailsContent, ProductDetailsReview, RelatedProducts },
-  props: {
-    item: {
-      type: Object as PropType<ProductType>,
-      default: {},
-      required: true
-    },
+const props = defineProps({
+  item: {
+    type: Object as PropType<ProductType>,
+    default: {},
+    required: true
   },
-  data() {
-    return {
-      active_img: this.item.img
-    }
-  },
-  methods: {
-    handleActiveImg(img: string) {
-      this.active_img = img
-    }
-  },
-  setup() {
-    return {}
-  }
 })
+const active_img = ref(props.item.img)
+
+const handleActiveImg = (img: string) => {
+  active_img.value = img
+}
 </script>

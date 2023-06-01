@@ -71,7 +71,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import SortFiltering from './filter-widget/SortFiltering.vue';
-import { useProductsStore } from '~~/store/useProducts';
+import { useGraphQLStore } from '~~/store/useGraphQL';
 import ProductItem from '../products/ProductItem.vue';
 import ProductListItem from '../products/ProductListItem.vue';
 import Pagination from '~~/ui/Pagination.vue';
@@ -101,7 +101,7 @@ export default defineComponent({
         }
     },
     setup() {
-        const store = useProductsStore();
+        const store = useGraphQLStore();
         return { store }
     }
 })

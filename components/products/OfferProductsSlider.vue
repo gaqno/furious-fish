@@ -148,7 +148,7 @@
 import { defineComponent, ref } from "vue";
 import { Carousel, Slide } from "vue3-carousel";
 // internal
-import { useProductsStore } from "~~/store/useProducts";
+import { useGraphQLStore } from "~~/store/useGraphQL";
 import SmProductItem from "./SmProductItem.vue";
 
 // interface
@@ -192,7 +192,7 @@ export default defineComponent({
     },
   },
   setup() {
-    const store = useProductsStore();
+    const store = useGraphQLStore();
     const trending_products = [
       { id: 1, items: store.products.filter((p) => p.trending).slice(0, 3) },
       { id: 2, items: store.products.filter((p) => p.trending).slice(3, 6) },

@@ -1,19 +1,28 @@
 export const QUERY_ALL_PRODUCTS = `
-  {
-    allProdutos {
+{
+  allProdutos {
+    id
+    category
+    newPrice
+    oldPrice
+    productDescription
+    productName
+    quantity
+    variants
+    reviews {
+      score
+      reviewComment
+      clientEmail
+      replyEmail
+      showReply
+      replyComment
+    }
+    productPictures {
       id
-      nomeDoProduto
-      fotoDoProduto {
-        url
-        id
+      url
+      responsiveImage {
+        src
       }
-      valorProduto
-      descricaoProduto
-      categoria
-      _status
-      _firstPublishedAt
     }
-    _allProdutosMeta {
-      count
-    }
-  }`
+  }
+}`

@@ -13,41 +13,58 @@
     </div>
 
     <div class="login-action mb-20 fix">
-        <span class="log-rem f-left">
-            <input id="remember" type="checkbox" />
-            <label for="remember">Lembrar-se de mim!</label>
-        </span>
-        <span class="forgot-login f-right">
-            <a href="#">Esqueceu sua senha?</a>
-        </span>
+      <span class="log-rem f-left">
+        <input id="remember" type="checkbox" />
+        <label for="remember">Lembrar-se de mim!</label>
+      </span>
+      <span class="forgot-login f-right">
+        <a href="#">Esqueceu sua senha?</a>
+      </span>
     </div>
     <button class="os-btn w-100">Entrar</button>
-    <div class="or-divide"><span>ou</span></div>
+    <div class="or-divide">
+      <span>ou</span>
+    </div>
+
+    <div class="gap-2 text-center">
+      <div class="fb-login-btn">
+        <button @click="signInWithFacebook" class="fb-login os-btn os-btn-black w-100">
+          <Icon name="carbon:logo-facebook" size="1.5em" />
+          Entrar com Facebook
+        </button>
+      </div>
+      <div class="google-login-btn my-2">
+        <button @click.prevent="signInWithGoogle" class="fb-login os-btn os-btn-black w-100">
+          <Icon name="carbon:logo-google" size="1.5em" />
+          Entrar com Google
+        </button>
+      </div>
+    </div>
+     <div class="or-divide">
+        <span>ou</span>
+      </div>
     <nuxt-link href="/register" class="os-btn os-btn-black w-100">
       Registrar
     </nuxt-link>
+
   </Form>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import { Field, Form, ErrorMessage } from "vee-validate";
 import * as yup from "yup";
 
-export default defineComponent({
-  components: { Field, Form, ErrorMessage },
-  setup() {
-    const schema = yup.object({
-      email: yup.string().required().email().label("Email"),
-      password: yup.string().required().min(6).label("Password"),
-    });
-
-    function onSubmit(values: object,{resetForm}: {resetForm: () => void}) {
-      alert(JSON.stringify(values, null, 2));
-      resetForm()
-    }
-    return { schema, onSubmit };
-  },
+const { signInWithFacebook, signInWithGoogle } = supabase()
+const schema = yup.object({
+  email: yup.string().required().email().label("Email"),
+  password: yup.string().required().min(6).label("Password"),
 });
+
+function onSubmit(values: object, { resetForm }: { resetForm: () => void }) {
+  alert(JSON.stringify(values, null, 2));
+  resetForm()
+}
+
+
 </script>
 

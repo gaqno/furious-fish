@@ -46,7 +46,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-3 col-12">
                         <div class="footer__widget mb-30">
                             <div class="footer__widget-title">
-                                <h5>information</h5>
+                                <h5>Informações</h5>
                             </div>
                             <div class="footer__widget-content">
                                 <div class="footer__links">
@@ -82,7 +82,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-7">
                         <div class="footer__copyright">
-                            <p>Copyright {{ new Date().getFullYear() }} © <nuxt-link href="/">Pesca Furiosa</nuxt-link> Todos os direitos reservados. <br/> Desenvolvido por <nuxt-link href="https://www.linkedin.com/in/gaqno" target="_blank">gaqno development</nuxt-link></p>
+                            <p>Copyright {{ new Date().getFullYear() }} © <nuxt-link href="/">Pesca Furiosa</nuxt-link> Todos os direitos reservados. <br/> Desenvolvido por <nuxt-link href="https://gaqno.vercel.app" target="_blank">gaqno development</nuxt-link></p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-5">

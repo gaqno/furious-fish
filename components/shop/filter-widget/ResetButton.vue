@@ -8,11 +8,11 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useProductsStore } from "~~/store/useProducts";
+import { useGraphQLStore } from "~~/store/useGraphQL";
 
 export default defineComponent({
   setup() {
-    const state = useProductsStore();
+    const state = useGraphQLStore();
     return { state };
   },
 });

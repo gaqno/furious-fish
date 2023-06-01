@@ -42,7 +42,7 @@ export const useProductsStore = defineStore("ML_PRODUCTS", {
     }] as unknown as ProductType[],
     filterProducts: productData as ProductType[],
     priceRange: [0, 2000] as any,
-    activeCls : '' as string,
+    activeCls: '' as string,
   }),
   actions: {
     handleParentCategory(value: string) {
@@ -80,7 +80,7 @@ export const useProductsStore = defineStore("ML_PRODUCTS", {
       this.filterProducts = this.products.filter(p => p.brand.toLowerCase() === brand.toLowerCase())
       this.activeCls = brand;
     },
-    handleSelectFiltering(value:string){
+    handleSelectFiltering(value: string) {
       switch (value) {
         case 'Default Sorting':
           return this.filterProducts = this.products
@@ -99,19 +99,19 @@ export const useProductsStore = defineStore("ML_PRODUCTS", {
     handleResetFilter() {
       this.filterProducts = this.products;
       this.activeCls = '';
-      this.priceRange = [0,500]
+      this.priceRange = [0, 500]
     },
     setProducts(products: ProductType[]) {
       this.products = products;
       this.filterProducts = products;
     }
   },
-  getters:{
+  getters: {
     getRelatedProducts(state) {
-      return (category:string,id:number) => (
+      return (category: string, id: number) => (
         state.products.filter(
           (p) => p.category.toLowerCase() === category.toLowerCase() && p.id !== id
-        ).slice(0,4)
+        ).slice(0, 4)
       )
     },
   }

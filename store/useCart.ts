@@ -18,7 +18,7 @@ export const useCartStore = defineStore('cart', {
           orderQuantity: 1,
         };
         this.cart_products.push(newItem);
-        useNuxtApp().$toast.success(`${payload.title} adicionar ao carrinho!`);
+        useNuxtApp().$toast.success(`${payload.title} adicionado ao carrinho!`);
       } else {
         this.cart_products.map((item) => {
           if (item.id === payload.id) {
@@ -30,7 +30,7 @@ export const useCartStore = defineStore('cart', {
                     : item.orderQuantity + 1;
                 useNuxtApp().$toast.success(`${this.orderQuantity} ${item.title} adicionar ao carrinho!`);
               } else {
-                useNuxtApp().$toast.error(`No more quantity available for this product!`);
+                useNuxtApp().$toast.error(`Sem mais disponível no estoque!`);
                 this.orderQuantity = 1;
               }
             }
@@ -57,7 +57,7 @@ export const useCartStore = defineStore('cart', {
     // remover_cart_products
     remover_cart_products (payload: ProductType){
       this.cart_products = this.cart_products.filter(p => p.id !== payload.id)
-      useNuxtApp().$toast.error(`${payload.title} remove to cart`);
+      useNuxtApp().$toast.error(`${payload.title} removido do carrinho!`);
       localStorage.setItem('cart_products', JSON.stringify(this.cart_products));
     },
     clear_cart () {

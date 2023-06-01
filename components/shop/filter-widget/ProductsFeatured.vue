@@ -36,11 +36,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { useProductsStore } from '~~/store/useProducts';
+import { useGraphQLStore } from '~~/store/useGraphQL';
 
 export default defineComponent({
     setup() {
-        const store = useProductsStore();
+        const store = useGraphQLStore();
         const featured_prd = store.products.filter(p => p.trending).slice(0, 2)
         return { featured_prd }
     }
