@@ -151,7 +151,6 @@ onMounted(() => {
   cart.get_cart_products;
   client.started;
 
-  fetchGraphQLProducts()
 
   let cachedUser = localStorage.getItem('sb-gtqsnnaskkxelbrnleow-auth-token')
     ? localStorage.getItem('sb-gtqsnnaskkxelbrnleow-auth-token')
@@ -161,6 +160,13 @@ onMounted(() => {
     logged: true,
     client: JSON.parse(cachedUser)
   }))
-})
+
+  fetchGraphQLProducts()
+    .then(() => {
+      console.log('produtos carregados')
+    })
+    .catch(err => {
+      console.log(err)
+    })
 </script>
 
