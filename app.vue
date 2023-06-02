@@ -8,17 +8,16 @@
 import { useAppStore } from './store/app';
 import { useClientStore } from './store/client';
 import { useCartStore } from './store/useCart';
-import { getAllProducts, getProductDetails, graphqlQuery } from './services/mercado-livre-api'
+import { graphqlQuery } from './services/datacms-api'
 import { QUERY_ALL_PRODUCTS } from '@/graphql/products'
-import { useProductsStore } from './store/useProducts';
 import { useGraphQLStore } from './store/useGraphQL';
 
 const cart = useCartStore();
 const client = useClientStore();
 const app = useAppStore();
-const ml_products = useProductsStore();
+// const ml_products = useProductsStore();
 const graphql_products = useGraphQLStore()
-const productsMLList = ref([])
+// const productsMLList = ref([])
 const productsGraphQLList = ref([])
 
 // const fetchMercadoLivreProducts = () => {
@@ -88,7 +87,18 @@ const productsGraphQLList = ref([])
 
 const fetchGraphQLProducts = () => {
   return new Promise((resolve, reject) => {
-    graphqlQuery(QUERY_ALL_PRODUCTS)
+    productsGraphQLList.value = []
+    graphqlQuery(
+      QUERY_ALL_PRODUCTS,
+      'getProducts',
+      {
+        filter: {
+          highlight: {
+            eq: true
+          }
+        }
+      }
+    )
       .then(res => {
         let obj = res.data.data.allProdutos.map((i: any) => ({
           banner: false,
@@ -124,6 +134,7 @@ const fetchGraphQLProducts = () => {
           trending: true,
           weight: i.variants.map((i: any) => i.key === 'Peso' ? i.value : null),
           variants: i.variants,
+          highlight: i.highlight,
           reviews: i.reviews
         }))
         productsGraphQLList.value.push(obj as never)

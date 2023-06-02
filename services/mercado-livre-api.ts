@@ -12,7 +12,8 @@ const callApi = (url: string, method: string, data?: any, graphql?: boolean) => 
         'Authorization': runtimeConfig.public.NUXT_PUBLIC_DATOCMS_TOKEN
       },
       data: {
-        query: data.query
+        query: data.query,
+        variables: data.variables
       }
     })
   } else {

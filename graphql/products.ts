@@ -1,28 +1,30 @@
 export const QUERY_ALL_PRODUCTS = `
-{
-  allProdutos {
-    id
-    category
-    newPrice
-    oldPrice
-    productDescription
-    productName
-    quantity
-    variants
-    reviews {
-      score
-      reviewComment
-      clientEmail
-      replyEmail
-      showReply
-      replyComment
-    }
-    productPictures {
+  query getProducts($filter: ProdutoModelFilter) {
+    allProdutos(filter: $filter) {
       id
-      url
-      responsiveImage {
-        src
+      category
+      newPrice
+      highlight
+      oldPrice
+      productDescription
+      productName
+      quantity
+      variants
+      reviews {
+        score
+        reviewComment
+        clientEmail
+        replyEmail
+        showReply
+        replyComment
+      }
+      productPictures {
+        id
+        url
+        responsiveImage {
+          src
+        }
       }
     }
   }
-}`
+`
