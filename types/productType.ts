@@ -38,11 +38,7 @@ interface ProductType {
     score: number,
     showReply: boolean,
   }[],
-  details:{
-    details_text:string,
-    details_list?:string[],
-    details_text_2?:string,
-  }
+  productDescription?:string,
 }
 
 export default ProductType;

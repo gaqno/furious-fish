@@ -2,36 +2,36 @@
   <Form :validation-schema="schema" @submit="onSubmit">
     <div class="mb-20">
       <label for="name">Primeiro nome<span>*</span></label>
-      <Field name="name" id="name" type="text" />
+      <Field v-model="form.name" name="name" id="name" type="text" />
       <ErrorMessage name="name" class="text-danger" />
     </div>
     
     <div class="mb-20">
       <label for="name">Último nome<span>*</span></label>
-      <Field name="last_name" id="last_name" type="text" />
+      <Field v-model="form.last_name" name="last_name" id="last_name" type="text" />
     </div>
 
     <div class="mb-20">
       <label for="email-id">Email <span>*</span></label>
-      <Field name="email" id="email-id" type="text" />
+      <Field v-model="form.email" name="email" id="email-id" type="text" />
       <ErrorMessage name="email" class="text-danger" />
     </div>
 
     <div class="mb-20">
       <label for="pass">Senha <span>*</span></label>
-      <Field name="password" id="pass" type="password" />
+      <Field v-model="form.password" name="password" id="pass" type="password" />
       <ErrorMessage name="password" class="text-danger" />
     </div>
 
     <div class="mb-20">
       <label for="pass">Telefone <span>*</span></label>
-      <Field name="password" id="phone" type="password" placeholder="Ex: (11)943215678" />
+      <Field v-model="form.phone" name="text" id="pass" type="password" />
     </div>
 
     <div class="mt-10"></div>
-    <button @click.prevent="signUp(schema.default)" type="submit" class="os-btn w-100">CADASTRAR</button>
+    <button @click.prevent="onSubmit(form)" type="submit" class="os-btn w-100">CADASTRAR</button>
     <div class="or-divide"><span>ou</span></div>
-    <div class="d-flex gap-2">
+    <div class="d-flex justify-content-between">
       <div class="fb-login-btn">
         <button @click="signInWithFacebook" class="fb-login os-btn os-btn-black ">
           <Icon name="carbon:logo-facebook" size="2em"/>
@@ -52,11 +52,13 @@
 </template>
 
 <script setup lang="ts">
-import { defineComponent } from "vue";
 import { Field, Form, ErrorMessage } from "vee-validate";
 import * as yup from "yup";
+import { useAppStore } from "~/store/app";
 
 const { signInWithFacebook, signInWithGoogle, signUp } = supabase()
+
+const app = useAppStore()
 const schema = yup.object({
   name: yup.string().required().label("Nome"),
   last_name: yup.string().required().label("Último nome"),
@@ -65,10 +67,28 @@ const schema = yup.object({
   phone: yup.string().required().label("Telefone"),
 });
 
-const onSubmit = (values: object, { resetForm }: { resetForm: () => void }) => {
-  alert(JSON.stringify(values, null, 2));
-  console.log(JSON.stringify(values, null, 2))
-  resetForm()
+const form = ref({
+  name: "",
+  last_name: "",
+  email: "",
+  password: "",
+  phone: "",
+})
+
+const onSubmit = (value: any) => {
+  schema.validate(value)
+    .then((valid) => {
+      if (valid) {
+        signUp(value)
+          .then(() => {
+            navigateTo("/login")
+            useNuxtApp().$toast.success(`Conta criada com sucesso, favor realizar login!`);
+          })
+          .catch((err) => {
+            useNuxtApp().$toast.error(`${err.message}`);
+          })
+      }
+  })
 }
 
 

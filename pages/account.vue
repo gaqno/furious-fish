@@ -6,24 +6,11 @@
   </layout>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script lang="ts" setup>
 import Layout from "~~/layout/Layout.vue";
 import BreadcrumbArea from "~~/components/common/breadcrumb/BreadcrumbArea.vue";
 import ProfileArea from "~~/components/profile/ProfileArea.vue";
 import ProfileMenuArea from "~~/components/profile/ProfileMenuArea.vue";
 
-export default defineComponent({
-  components: {
-    Layout,
-    BreadcrumbArea,
-    ProfileArea,
-    ProfileMenuArea,
-  },
-  setup() {
-    useHead({
-      title: "Conta",
-    });
-  },
-});
+useHead({ title: "Conta" });
 </script>

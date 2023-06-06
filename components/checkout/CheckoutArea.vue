@@ -13,8 +13,9 @@
           <div class="col-lg-6">
             <OrderArea />
             <h3>Pagamento</h3>
+            <div id="wallet_container"></div>
             <div id="checkout-wrapper"></div>
-            <div id="cardPaymentBrick_container"></div>
+            <div id="paymentBrick_container"></div>
           </div>
         </div>
       </form>
@@ -22,60 +23,93 @@
   </section>
 </template>
 
+
 <script setup>
 import { loadMercadoPago } from "@mercadopago/sdk-js";
 import BillingDetails from "./BillingDetails.vue";
 import OrderArea from "./OrderArea.vue";
+import { useCartStore } from "~/store/useCart";
+import { useAppStore } from "~/store/app";
 
+const config = useRuntimeConfig()
 await loadMercadoPago();
-const mp = new MercadoPago('APP_USR-1581d397-fde9-40e0-9cb3-54231679b3ea', { locale: 'pt-BR' });
+const mp = new MercadoPago(config.public.MP_TEST_KEY, { locale: 'pt-BR' });
 const bricksBuilder = mp.bricks();
+const cart = useCartStore()
 
-const renderCardPaymentBrick = async (bricksBuilder) => {
-
+const renderPaymentBrick = async (bricksBuilder) => {
   const settings = {
     initialization: {
-      amount: 100, //value of the payment to be processed
+      /*
+      "amount" is the total amount to be paid by all means of payment with the exception of the Mercado Pago Account and Installment without a credit card, which have their processing value determined in the backend through the "preferenceId"
+      */
+      amount: useCartStore().totalPriceQuantity.total,
+      preferenceId: "<PREFERENCE_ID>",
     },
     customization: {
-      visual: {
-        style: {
-          theme: 'bootstrap' // 'default' |'dark' | 'bootstrap' | 'flat'
-        }
-      }
+      paymentMethods: {
+        ticket: "all",
+        bankTransfer: "all",
+        creditCard: "all",
+        debitCard: "all",
+        mercadoPago: "all",
+      },
     },
     callbacks: {
-      onSubmit: (cardFormData) => {
+      onReady: () => {
+        useAppStore().$patch({ loading: false })
+      },
+      onSubmit: ({ selectedPaymentMethod, formData }) => {
+        // callback called when clicking the submit data button
         return new Promise((resolve, reject) => {
-          fetch("/process_payment", {
+          console.log({ selectedPaymentMethod, formData })
+
+          fetch("https://api.mercadopago.com/v1/payments", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
+              "Authorization": `Bearer ${config.public.MP_TEST_ACCESS_TOKEN}`
             },
-            body: JSON.stringify(cardFormData)
+            body: JSON.stringify({...formData}),
           })
-            .then(resp => resp.json())
+            .then((response) => response.json())
             .then((response) => {
-              // get payment result
+              console.log({ response });
               resolve();
             })
             .catch((error) => {
-              // get payment result error
+              // handle error response when trying to create payment
               reject();
-            })
+            });
         });
       },
-      onReady: () => {
-        // handle form ready
-      },
       onError: (error) => {
-        // handle error
-      }
-    }
+        // callback called for all Brick error cases
+        console.error(error);
+      },
+    },
+  };
+  window.paymentBrickController = await bricksBuilder.create(
+    "payment",
+    "paymentBrick_container",
+    settings
+  );
+};
+renderPaymentBrick(bricksBuilder);
+
+onMounted(() => {
+  useAppStore().$patch({ loading: false })
+})
+
+watchEffect(() => {
+  const query = new URLSearchParams(window.location.search);
+  if (query.get('success')) {
+    console.log('Order placed! You will receive an email confirmation.');
   }
 
-  const cardPaymentBrickController = await bricksBuilder.create('cardPayment', 'cardPaymentBrick_container', settings);
-};
+  if (query.get('canceled')) {
+    console.log('Order canceled -- continue to shop around and checkout when you’re ready.');
+  }
 
-renderCardPaymentBrick(bricksBuilder);
+})
 </script>

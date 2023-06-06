@@ -13,9 +13,35 @@ export default {
         },
         {
           link: '/shop',
-          title: 'Produtos',
-          hasDropdown: false,
-          megamenu: false,
+          title: 'Categorias',
+          hasDropdown: true,
+          megamenu: true,
+          dropdownItems: [
+            {
+              link: '/shop&category=furiosa', title: 'FURIOSA',
+              dropdownMenu: [
+                { link: '/about?a=furiosa', title: 'Sobre' },
+                { link: '/shop?category=furiosa', title: 'Produtos' },
+                { link: '/shop?category=furiosa&trend=true', title: 'Tendências' },
+              ]
+            },
+            {
+              link: '/shop', title: 'INSANA',
+              dropdownMenu: [
+                { link: '/about?a=insana', title: 'Sobre' },
+                { link: '/shop?category=furiosa', title: 'Produtos' },
+                { link: '/shop?category=furiosa&trend=true', title: 'Tendências' },
+              ]
+            },
+            {
+              link: '/shop', title: 'PESQUEIRO',
+              dropdownMenu: [
+                { link: '/about?a=pesqueiro', title: 'Sobre' },
+                { link: '/shop?category=pesqueiro', title: 'Produtos' },
+                { link: '/shop?category=pesqueiro&trend=true', title: 'Tendências' },
+              ]
+            },
+          ]
         },
         // {
         //   link: '/blog',

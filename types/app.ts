@@ -22,7 +22,7 @@ export interface App {
       [key: string]: any
     }
   },
-  toaster: {
+  toast: {
     show: boolean,
     type: string,
     title: string,

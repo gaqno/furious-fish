@@ -15,6 +15,11 @@ import { useGraphQLStore } from './store/useGraphQL';
 const cart = useCartStore();
 const client = useClientStore();
 const app = useAppStore();
+
+// verify env variables
+
+
+
 // const ml_products = useProductsStore();
 const graphql_products = useGraphQLStore()
 // const productsMLList = ref([])
@@ -106,18 +111,7 @@ const fetchGraphQLProducts = () => {
           brand: 'Nike',
           category: i.category,
           colors: i.variants.map((i: any) => i.key === 'Cor' ? i.value : null),
-          details: {
-            details_list: [
-              "Claritas est etiam processus dynamicus.",
-              "Qui sequitur mutationem consuetudium lectorum.",
-              "Claritas est etiam processus dynamicus.",
-              "Qui sequitur mutationem consuetudium lectorum.",
-              "Claritas est etiam processus dynamicus.",
-              "Qui sequitur mutationem consuetudium lectorum."
-            ],
-            details_text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.",
-            details_text_2: "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release."
-          },
+          productDescription: i.productDescription,
           id: i.id,
           img: i.productPictures[0].url,
           old_price: i.oldPrice,
@@ -127,7 +121,6 @@ const fetchGraphQLProducts = () => {
           rating: 4,
           related_images: i.productPictures.map((i: any) => i.url),
           sizes: i.va,
-          sm_desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           thumb_img: i.productPictures[0].url,
           big_img: i.productPictures[0].url,
           title: i.productName,
@@ -161,13 +154,16 @@ onMounted(() => {
     client: JSON.parse(cachedUser)
   }))
 
+  watchEffect(() => {
+    setInterval(() => {
+      fetch('/notifications')
+        .then(res => res.json())
+        .then(res => console.log({ notifications: res }))
+        .catch(err => console.log(err))
+    }, 5000)
+  })
+
   fetchGraphQLProducts()
-    .then(() => {
-      console.log('produtos carregados')
-    })
-    .catch(err => {
-      console.log(err)
-    })
 })
 </script>
 

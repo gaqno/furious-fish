@@ -22,7 +22,7 @@ export const useAppStore = defineStore({
         template: "",
         data: {}
       },
-      toaster: {
+      toast: {
         show: false,
         title: "",
         message: "",
@@ -45,12 +45,12 @@ export const useAppStore = defineStore({
   },
   actions: {
     toggleToast() {
-      this.toaster.show = !this.toaster.show;
-      this.toaster.title = "";
-      this.toaster.message = "";
-      this.toaster.icon = "";
-      this.toaster.type = "";
-      this.toaster.data = {};
+      this.toast.show = !this.toast.show;
+      this.toast.title = "";
+      this.toast.message = "";
+      this.toast.icon = "";
+      this.toast.type = "";
+      this.toast.data = {};
     },
     logout() {
       this.$reset();

@@ -18,11 +18,8 @@
       </span>
     </div>
     <div class="product__price-2 mb-25">
-      <span>R${{ item.price }}</span>
+      <span class="">R${{ item.price }}</span>
       <span v-if="item.old_price" class="old-price">R${{ item.old_price }}</span>
-    </div>
-    <div class="product__modal-des mb-30">
-      <p>{{ item.sm_desc }}</p>
     </div>
     <div class="product__modal-form">
       <form action="#">

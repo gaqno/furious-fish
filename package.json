@@ -23,6 +23,7 @@
     "bootstrap": "^5.2.3",
     "dotenv": "^16.0.3",
     "mercadopago": "^1.5.16",
+    "nuxt-stripe-module": "^3.2.0",
     "pinia": "^2.0.32",
     "sass": "^1.58.3",
     "vee-validate": "^4.7.4",

@@ -1,6 +1,6 @@
 <template>
   <section class="shop__area pb-65">
-    <div class="shop__top grey-bg-6 pt-100">
+    <div class="shop__top grey-bg-6">
       <div class="container">
         <div class="row">
           <div class="col-xl-6 col-lg-6">
@@ -22,8 +22,9 @@
                 <div class="product__modal-img product__thumb w-img">
                   <img :src="active_img" alt="product_img">
                   <div class="product__sale ">
-                    <span class="new">new</span>
-                    <span class="percent">-16%</span>
+                    <span class="new"></span>
+                    <!-- item.oldPrice and item.newPrice diferrence percent -->
+                    <span class="percent">{{ discountPercent(item.old_price!, item.price) }}% OFF</span>
                   </div>
                 </div>
               </div>
@@ -40,14 +41,14 @@
         <div class="row">
           <div class="col-xl-12">
             <div class="product__details-tab">
-              <div class="product__details-tab-nav text-center mb-45">
+              <div class="product__details-tab-nav text-center mb-45 mt-120">
                 <nav>
                   <div class="nav nav-tabs justify-content-start justify-content-sm-center" id="pro-details"
                     role="tablist">
                     <a class="nav-item nav-link active" id="des-tab" data-bs-toggle="tab" href="#des" role="tab"
                       aria-controls="des" aria-selected="true">Descrição</a>
-                    <a class="nav-item nav-link" id="add-tab" data-bs-toggle="tab" href="#add" role="tab"
-                      aria-controls="add" aria-selected="false">Informações Adicionais</a>
+                    <!-- <a class="nav-item nav-link" id="add-tab" data-bs-toggle="tab" href="#add" role="tab"
+                      aria-controls="add" aria-selected="false">Informações Adicionais</a> -->
                     <a class="nav-item nav-link" id="review-tab" data-bs-toggle="tab" href="#review" role="tab"
                       aria-controls="review" aria-selected="false">Avaliações</a>
                   </div>
@@ -56,16 +57,7 @@
               <div class="tab-content" id="pro-detailsContent">
                 <div class="tab-pane fade show active" id="des" role="tabpanel">
                   <div class="product__details-des">
-                    <p>{{ item.details.details_text }}</p>
-
-                    <div class="product__details-des-list mb-20">
-                      <ul>
-                        <li v-for="(list, i) in item.details.details_list" :key="i">
-                          <span>{{ list }}</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <p>{{ item.details.details_text_2 }}</p>
+                    <p>{{ item.productDescription }}</p>
                   </div>
                 </div>
                 <div class="tab-pane fade" id="add" role="tabpanel">
@@ -74,7 +66,7 @@
                       <li><span>Weight</span></li>
                       <li><span>.25 KG</span></li>
                       <li><span>Dimention</span></li>
-                      <li><span>62 × 56 × 12 cm</span></li>
+                      <li><span>62 x 56 x 12 cm</span></li>
                       <li><span>Size</span></li>
                       <li><span>XL, XXL, LG, SM, MD</span></li>
                     </ul>
@@ -103,6 +95,11 @@ import ProductDetailsContent from './ProductDetailsContent.vue';
 import ProductDetailsReview from './ProductDetailsReview.vue';
 import RelatedProducts from './RelatedProducts.vue';
 
+const discountPercent = (oldPrice: number, newPrice: number) => {
+  const percent = Math.round((oldPrice - newPrice) / oldPrice * 100);
+  return percent;
+}
+
 const props = defineProps({
   item: {
     type: Object as PropType<ProductType>,
@@ -110,8 +107,8 @@ const props = defineProps({
     required: true
   },
 })
-const active_img = ref(props.item.img)
 
+const active_img = ref(props.item.img)
 const handleActiveImg = (img: string) => {
   active_img.value = img
 }

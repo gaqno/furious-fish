@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "vue3-carousel/dist/carousel.css",
     "~/assets/scss/main.scss",
   ],
+  components: true,
   plugins: [
     { src: "./plugins/vue-masonry-wall.ts", mode: "client" },
     { src: "./plugins/vue3-toastify.ts", mode: "client" },
@@ -22,6 +23,7 @@ export default defineNuxtConfig({
     ],
     'nuxt-icon',
     '@nuxtjs/supabase',
+    // 'nuxt-stripe-module'
   ],
   app: {
     head: {
@@ -35,12 +37,20 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
+    // stripe: {
+    //   publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+    // },
     public: {
       BASE_URL: process.env.BASE_URL,
-      CLIENT_ID: process.env.CLIENT_ID,
+      MP_APPLICATION_NUMBER: process.env.MP_APPLICATION_NUMBER,
+      MP_CLIENT_SECRET: process.env.MP_CLIENT_SECRET,
+      MP_USER_ID: process.env.MP_USER_ID,
+      MP_TEST_KEY: process.env.MP_TEST_KEY,
+      MP_TEST_ACCESS_TOKEN: process.env.MP_TEST_ACCESS_TOKEN,
       CLIENT_SECRET: process.env.CLIENT_SECRET,
       REDIRECT_URI: process.env.REDIRECT_URI,
       PUBLIC_KEY: process.env.PUBLIC_KEY,
+      TEST_KEY: process.env.TEST_KEY,
       ACCESS_TOKEN: process.env.ACCESS_TOKEN,
       SYS_PWD: process.env.SYS_PWD,
       SUPABASE_URL: process.env.SUPABASE_URL,

@@ -2,13 +2,13 @@
   <Form :validation-schema="schema" @submit="onSubmit">
     <div class="mb-20">
       <label for="email-id">Email <span>**</span></label>
-      <Field name="email" id="email-id" type="text" placeholder="Endereço de email..." />
+      <Field name="email" id="email-id" type="text" v-model="form.email" />
       <ErrorMessage name="email" class="text-danger" />
     </div>
 
     <div class="mb-20">
       <label for="pass">Senha <span>**</span></label>
-      <Field name="password" id="pass" type="password" placeholder="***" />
+      <Field name="password" id="pass" type="password" placeholder="***" v-model="form.password"/>
       <ErrorMessage name="password" class="text-danger" />
     </div>
 
@@ -21,7 +21,7 @@
         <a href="#">Esqueceu sua senha?</a>
       </span>
     </div>
-    <button class="os-btn w-100">Entrar</button>
+    <button @click="onSubmit(form)" class="os-btn w-100">Entrar</button>
     <div class="or-divide">
       <span>ou</span>
     </div>
@@ -40,9 +40,9 @@
         </button>
       </div>
     </div>
-     <div class="or-divide">
-        <span>ou</span>
-      </div>
+    <div class="or-divide">
+      <span>ou</span>
+    </div>
     <nuxt-link href="/register" class="os-btn os-btn-black w-100">
       Registrar
     </nuxt-link>
@@ -54,17 +54,38 @@
 import { Field, Form, ErrorMessage } from "vee-validate";
 import * as yup from "yup";
 
-const { signInWithFacebook, signInWithGoogle } = supabase()
+const { signInWithFacebook, signInWithGoogle, signIn } = supabase()
 const schema = yup.object({
   email: yup.string().required().email().label("Email"),
   password: yup.string().required().min(6).label("Password"),
 });
 
-function onSubmit(values: object, { resetForm }: { resetForm: () => void }) {
-  alert(JSON.stringify(values, null, 2));
-  resetForm()
-}
+const form = ref({
+  email: "",
+  password: "",
+})
 
+schema.validate({ email: "johndoe", password: "abc123" }).catch((err) => {
+  err.name; // => 'ValidationError'
+  err.errors; // => ['email must be a valid email']
+});
+
+const onSubmit = (values: any) => {
+  schema.validate(values)
+    .then((valid) => {
+      if (valid) {
+        signIn(values.email, values.password)
+        .then((res) => {
+          console.log(res)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+      } else {
+        console.log("invalid");
+      }
+    })
+};
 
 </script>
 

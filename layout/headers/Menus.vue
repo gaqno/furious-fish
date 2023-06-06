@@ -44,7 +44,7 @@
 
 <script lang="ts">
 // import menuType from "~~/types/menuType";
-import bg from '~/assets/img/bg/mega-menu-bg.jpg';
+import bg from '~/assets/img/slider/03/slider-03.png';
 
 
 import { defineComponent } from "vue";

@@ -11,7 +11,6 @@ export default function () {
       password
     })
     if (data.user && data.user.id) {
-      navigateTo('/dashboard')
       client.$patch({
         session: {
           access_token: data.session?.access_token,
@@ -22,29 +21,27 @@ export default function () {
         },
         user: { ...data.user }
       })
+      navigateTo('/')
+      useNuxtApp().$toast.success('Bem vindo!')
     }
     if (error) {
-      console.log('singInERROR', error.message)
+      useNuxtApp().$toast.error(error.message)
     }
   }
 
   const signUp = async (form: any) => {
-    const { data, error } = await supabase.auth.signUp({
-      phone: form.phone,
+    const { data, error } = await supabase.auth.signUp({ 
       email: form.email,
-      password: form.password,
-      options: {
-        data: {
-          ...form.data
-        }
-      },
+      password: form.password
     })
 
-    if (data) {
-      console.log({ data })
-    }
     if (error) {
-      console.log({ error })
+      return error
+    }
+    if (data) {
+      await supabase
+        .from('clients')
+        .upsert(form)
     }
   }
 

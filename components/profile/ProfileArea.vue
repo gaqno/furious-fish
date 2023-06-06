@@ -6,11 +6,11 @@
           <div class="col-xxl-6 col-md-6">
             <div class="profile__basic d-md-flex align-items-center">
               <div class="profile__basic-thumb mr-30">
-                <img :src="app.getUserIdentifier.picture" alt="">
+                <img :src="app.getUserIdentifier.picture || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBqxrQ-aZb5xrEJQxmh1xVC7qEIHVkQjyNyorxTPcKAQ&s'" alt="">
               </div>
               <div class="profile__basic-content">
                 <h3 class="profile__basic-title">
-                  Bem vindo de volta, <span>{{ app.getUserIdentifier.full_name }}</span>
+                  Bem vindo, <span>{{ app.getUserIdentifier.full_name }}</span>
                 </h3>
                 <p>{{ state.cart_products.length }} Produtos no carrinho</p>
                 <nuxt-link href="/cart">Ir para carrinho</nuxt-link>

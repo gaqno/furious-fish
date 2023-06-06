@@ -510,6 +510,17 @@ p {
 .os-btn-black:hover {
   border-color: #bc8246;
 }
+.os-btn-blue {
+  color: #ffffff;
+  background-color: #323232;
+  border-color: #323232;
+}
+.os-btn-blue::after {
+  background-color: #001761;
+}
+.os-btn-blue:hover {
+  border-color: #001761;
+}
 .os-btn-white {
   color: #ffffff;
   border-color: #ffffff;
